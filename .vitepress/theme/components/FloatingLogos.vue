@@ -66,12 +66,12 @@ onUnmounted(() => {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 400px;
-  height: 400px;
+  width: 250px;
+  height: 250px;
   border-radius: 50%;
   background: var(--vp-c-brand-soft);
   transform: translate(-50%, -50%) translateZ(-50px);
-  filter: blur(80px);
+  filter: blur(60px);
   z-index: 1;
 }
 
