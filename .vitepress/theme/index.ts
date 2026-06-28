@@ -44,6 +44,10 @@ export default {
           cursor.style.top = e.clientY + 'px'
         })
         
+        document.addEventListener('mouseleave', () => {
+          cursor.style.display = 'none'
+        })
+        
         document.addEventListener('mouseover', (e) => {
           const target = e.target as HTMLElement
           if (target && typeof target.closest === 'function') {
