@@ -39,6 +39,36 @@ export default {
         // --- Shimeji Gojo ---
         initShimeji()
 
+        // --- Custom Navbar Button (Toggle Gojo) ---
+        const setupGojoToggle = () => {
+          if (document.getElementById('gojo-toggle-btn')) return;
+          const navMenu = document.querySelector('.VPNavBarMenu');
+          if (navMenu) {
+            const toggleBtn = document.createElement('button');
+            toggleBtn.id = 'gojo-toggle-btn';
+            toggleBtn.textContent = 'Remove Gojo';
+            toggleBtn.className = 'gojo-toggle-btn';
+            
+            toggleBtn.onclick = () => {
+              const shimeji = document.getElementById('gojo-shimeji');
+              if (shimeji) {
+                shimeji.remove();
+                toggleBtn.textContent = 'Deploy Gojo';
+                toggleBtn.style.color = 'var(--vp-c-brand-1)';
+              } else {
+                initShimeji();
+                toggleBtn.textContent = 'Remove Gojo';
+                toggleBtn.style.color = 'var(--vp-c-text-1)';
+              }
+            };
+            
+            navMenu.insertBefore(toggleBtn, navMenu.firstChild);
+          } else {
+            setTimeout(setupGojoToggle, 100);
+          }
+        };
+        setTimeout(setupGojoToggle, 100);
+
         // --- 1. Floating Orbs ---
         if (!document.getElementById('orbs-bg')) {
           const orbs = document.createElement('div')

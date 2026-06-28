@@ -429,3 +429,22 @@ body::before {
 .shimeji-gojo:active {
   cursor: grabbing;
 }
+
+/* =========================================================
+   Shimeji Navbar Toggle Button
+   ========================================================= */
+.gojo-toggle-btn {
+  background: transparent;
+  border: none;
+  color: var(--vp-c-text-1);
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 0 12px;
+  line-height: var(--vp-nav-height);
+  transition: color 0.25s;
+}
+.gojo-toggle-btn:hover {
+  color: var(--vp-c-brand-1);
+}
