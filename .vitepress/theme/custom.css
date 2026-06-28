@@ -480,18 +480,28 @@ body::before {
    Desktop Sidebar Hamburger Toggle
    ========================================================= */
 
+/* Ensure the title container acts as a proper flex row so button and logo sit side-by-side */
+.VPNavBar .wrapper .title,
+.VPNavBar .title {
+  display: flex !important;
+  align-items: center !important;
+  flex-direction: row !important;
+  flex-wrap: nowrap !important;
+}
+
 .sidebar-toggle-btn {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 40px;
-  height: var(--vp-nav-height);
+  width: 32px;
+  height: 32px;
   color: var(--vp-c-text-1);
   cursor: pointer;
   background: transparent;
   border: none;
   transition: color 0.25s;
-  margin-right: 8px; /* space between hamburger and title */
+  margin-right: 12px; /* space between hamburger and title */
+  flex-shrink: 0;
 }
 .sidebar-toggle-btn:hover {
   color: var(--vp-c-brand-1);
