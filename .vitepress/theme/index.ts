@@ -37,6 +37,18 @@ export default {
           cursor.style.left = e.clientX + 'px'
           cursor.style.top = e.clientY + 'px'
         })
+        
+        document.addEventListener('mouseover', (e) => {
+          const target = e.target as HTMLElement
+          if (target && typeof target.closest === 'function') {
+            const isClickable = target.closest('a, button, [role="button"], input, select, textarea, .vp-doc img')
+            if (isClickable) {
+              cursor.classList.add('pointer')
+            } else {
+              cursor.classList.remove('pointer')
+            }
+          }
+        })
 
         const style = document.createElement('style')
         style.innerHTML = '* { cursor: none !important; }'

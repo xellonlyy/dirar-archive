@@ -132,12 +132,17 @@ body::before {
 /* Custom Animated Cursor */
 #custom-cursor {
   position: fixed;
-  width: 48px;
-  height: 48px;
+  width: 64px;
+  height: 64px;
   background: url('/gojo-cursor.gif') no-repeat;
-  background-size: contain;
+  background-size: 200% 100%;
+  background-position: left center;
   pointer-events: none;
   z-index: 999999;
   display: none;
   transform: translate(-10px, -10px);
+}
+
+#custom-cursor.pointer {
+  background-position: right center;
 }
