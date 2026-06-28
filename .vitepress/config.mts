@@ -9,11 +9,11 @@ export default defineConfig({
 
   head: [
     ['link', { rel: 'icon', href: '/logo.ico' }],
-    ['meta', { property: 'og:image', content: '/giphy (2).gif' }],
+    ['meta', { property: 'og:image', content: '/satoru-gojo-8.png' }],
   ],
 
   themeConfig: {
-    logo: '/giphy (2).gif',
+    logo: '/satoru-gojo-8.png',
     siteTitle: 'Dirar',
 
     search: {
