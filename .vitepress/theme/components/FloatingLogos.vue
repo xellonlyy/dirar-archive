@@ -48,7 +48,7 @@ onUnmounted(() => {
     </div>
     
     <div class="icon icon-capcut">
-      <img src="/icons/logo%20capcut.png" alt="CapCut" />
+      <img src="/icons/logo-capcut.png" alt="CapCut" />
     </div>
   </div>
 </template>
