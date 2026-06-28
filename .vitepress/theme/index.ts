@@ -264,31 +264,37 @@ export default {
         } // end if (link && link.href)
         
         // Mahoraga Button Logic
-        const btn = target.closest('.mahoraga-btn') as HTMLAnchorElement;
-        if (btn && btn.href && !btn.classList.contains('is-adapting')) {
+        const linkElem = target.closest('a') as HTMLAnchorElement;
+        const isMahoraga = linkElem && linkElem.href && (linkElem.classList.contains('mahoraga-btn') || linkElem.href.includes('pixeldrain.com'));
+        
+        if (isMahoraga && !linkElem.classList.contains('is-adapting')) {
           e.preventDefault();
           
           // Save original content
-          const originalHTML = btn.innerHTML;
-          const originalWidth = btn.offsetWidth;
-          const originalHeight = btn.offsetHeight;
+          const originalHTML = linkElem.innerHTML;
+          const originalWidth = linkElem.offsetWidth;
+          const originalHeight = linkElem.offsetHeight;
           
           // Lock size
-          btn.style.width = `${originalWidth}px`;
-          btn.style.height = `${originalHeight}px`;
-          btn.classList.add('is-adapting');
+          linkElem.style.display = 'inline-flex';
+          linkElem.style.alignItems = 'center';
+          linkElem.style.justifyContent = 'center';
+          linkElem.style.width = `${originalWidth}px`;
+          linkElem.style.height = `${originalHeight}px`;
+          linkElem.classList.add('is-adapting');
           
           // Replace with wheel
-          btn.innerHTML = `<img src="/icons/mahoraga-wheel.png" class="mahoraga-wheel-img" alt="Adapting..." />`;
+          linkElem.innerHTML = `<img src="/icons/mahoraga-wheel.png" class="mahoraga-wheel-img" alt="Adapting..." />`;
           
           setTimeout(() => {
-            window.open(btn.href, '_blank');
+            window.open(linkElem.href, '_blank');
             
             // Restore
-            btn.innerHTML = originalHTML;
-            btn.style.width = '';
-            btn.style.height = '';
-            btn.classList.remove('is-adapting');
+            linkElem.innerHTML = originalHTML;
+            linkElem.style.width = '';
+            linkElem.style.height = '';
+            linkElem.style.display = '';
+            linkElem.classList.remove('is-adapting');
           }, 1500);
         }
       });
