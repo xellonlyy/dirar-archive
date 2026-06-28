@@ -6,6 +6,7 @@
   --vp-c-brand-2: #9333ea;
   --vp-c-brand-3: #7c3aed;
   --vp-c-brand-soft: rgba(168, 85, 247, 0.14);
+  --vp-scrollbar-width: 0px !important;
 }
 
 h1, h2, h3, h4, h5, h6, .title, .name {
