@@ -29,3 +29,27 @@
 code {
   color: var(--vp-c-brand-1);
 }
+
+/* Make home page have the GIF background */
+body {
+  background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.7)), url('/giphy (2).gif') !important;
+  background-size: cover !important;
+  background-attachment: fixed !important;
+  background-position: center !important;
+}
+
+/* Make VitePress containers transparent so background shows through */
+.Layout {
+  background-color: transparent !important;
+}
+.VPNav {
+  background-color: rgba(27, 27, 31, 0.5) !important;
+  backdrop-filter: blur(10px);
+}
+.VPSidebar {
+  background-color: rgba(27, 27, 31, 0.8) !important;
+  backdrop-filter: blur(10px);
+}
+.VPContent {
+  background-color: transparent !important;
+}

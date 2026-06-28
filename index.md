@@ -6,9 +6,7 @@ description: Editing Resources.
 hero:
   name: "Dirar"
   tagline: Editing Resources.
-  image:
-    src: /satoru-gojo-8.png
-    alt: Dirar
+
   actions:
     - theme: brand
       text: Frequently Asked Questions
