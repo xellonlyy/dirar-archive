@@ -255,7 +255,7 @@ export function initShimeji() {
 
     if (!isDragging) {
       // Apply direction scale only if walking or falling or idle
-      let overrideScale = (state === STATES.CLIMBING_LEFT || state === STATES.CLIMBING_RIGHT) ? 1 : direction;
+      let overrideScale = (state === STATES.CLIMBING_LEFT || state === STATES.CLIMBING_RIGHT || state === STATES.TELEPORTING) ? 1 : undefined;
       updatePosition(overrideScale);
       img.src = `/shimeji-gojo/shime${frame}.png`;
     }
