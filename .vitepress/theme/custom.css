@@ -454,11 +454,24 @@ body::before {
    ========================================================= */
 
 /* Fix 1: Prevent text clipping and subpixel rendering artifacts in Navbar (Home/FAQ) */
-.VPNavBarMenuLink, .gojo-toggle-btn, .title, .name {
+.VPNavBarMenu, .VPNavBarMenuLink, .gojo-toggle-btn, .title, .name {
   -webkit-font-smoothing: antialiased !important;
   -moz-osx-font-smoothing: grayscale !important;
+  transform: translateZ(0); /* Force GPU layer to fix backdrop-filter fringing in Safari */
+}
+
+/* Force normal line height and flex centering so tall fonts (Space Grotesk) don't get clipped by fixed line-height */
+.VPNavBarMenuLink, .gojo-toggle-btn {
+  line-height: normal !important;
+  height: var(--vp-nav-height) !important;
+  display: flex !important;
+  align-items: center !important;
   overflow: visible !important;
-  padding-top: 2px;
+}
+
+.VPNavBarMenuLink span, .gojo-toggle-btn {
+  padding-top: 4px !important; /* Push text slightly down to clear bounding box */
+  display: inline-block !important;
 }
 
 /* Fix 2: Prevent hard cut-off during overscroll rubber-banding at the bottom on Mac */
