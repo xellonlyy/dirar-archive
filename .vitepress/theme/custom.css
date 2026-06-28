@@ -61,6 +61,13 @@ body::before {
   background-color: rgba(27, 27, 31, 0.5) !important;
   backdrop-filter: blur(10px);
 }
+
+/* Fix navbar background split/cut-off on inner pages with sidebar */
+.VPNavBar.has-sidebar .content,
+.VPNavBar.has-sidebar .title,
+.VPNavBar.has-sidebar .wrapper {
+  background-color: transparent !important;
+}
 .VPSidebar {
   background-color: rgba(27, 27, 31, 0.8) !important;
   backdrop-filter: blur(10px);
