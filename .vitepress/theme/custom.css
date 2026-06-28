@@ -109,9 +109,6 @@ body::before {
 }
 
 /* Scroll Reveal Animations */
-html {
-  scroll-behavior: smooth;
-}
 
 .scroll-hidden {
   opacity: 0;

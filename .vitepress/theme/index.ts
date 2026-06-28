@@ -17,8 +17,8 @@ export default {
         })
       }, { threshold: 0.1 })
 
-      // Select elements to animate
-      document.querySelectorAll('.VPFeature, .vp-doc h2, .vp-doc h3, .vp-doc p, .vp-doc img').forEach((el) => {
+      // Select elements to animate, avoiding headings so anchor links work perfectly
+      document.querySelectorAll('.VPFeature, .vp-doc p, .vp-doc img, .vp-doc ul, .vp-doc ol').forEach((el) => {
         el.classList.add('scroll-hidden')
         observer.observe(el)
       })
