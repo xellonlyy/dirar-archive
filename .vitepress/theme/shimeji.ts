@@ -5,7 +5,10 @@ export function initShimeji() {
     FALLING: 'FALLING',
     IDLE: 'IDLE',
     WALKING: 'WALKING',
-    DRAGGED: 'DRAGGED'
+    DRAGGED: 'DRAGGED',
+    CLIMBING_LEFT: 'CLIMBING_LEFT',
+    CLIMBING_RIGHT: 'CLIMBING_RIGHT',
+    TELEPORTING: 'TELEPORTING'
   };
 
   let state = STATES.FALLING;
@@ -18,24 +21,30 @@ export function initShimeji() {
   const walkSpeed = 2;
   let direction = Math.random() > 0.5 ? 1 : -1; // 1 = right, -1 = left
 
-  let frame = 1;
+  let frame = 4;
   let frameTimer = 0;
   let actionTimer = 0;
+
+  // Idle sequence trackers
+  let currentIdleFrames = [11];
+  let idleIndex = 0;
 
   const shimeji = document.createElement('div');
   shimeji.id = 'gojo-shimeji';
   shimeji.className = 'shimeji-gojo';
   
   const img = document.createElement('img');
-  img.src = '/shimeji-gojo/shime7.png'; // initial falling frame
+  img.src = '/shimeji-gojo/shime4.png';
   img.draggable = false;
   shimeji.appendChild(img);
   document.body.appendChild(shimeji);
 
-  const size = 128; // standard shimeji size
+  const size = 128;
   let isDragging = false;
   let dragOffsetX = 0;
   let dragOffsetY = 0;
+  let lastMouseX = window.innerWidth / 2;
+  let dragVelocityX = 0;
 
   // Interaction
   shimeji.addEventListener('mousedown', (e) => {
@@ -43,16 +52,34 @@ export function initShimeji() {
     state = STATES.DRAGGED;
     dragOffsetX = e.clientX - x;
     dragOffsetY = e.clientY - y;
-    img.src = '/shimeji-gojo/shime7.png'; // holding frame
+    lastMouseX = e.clientX;
     shimeji.style.cursor = 'grabbing';
+    direction = 1; // reset flip for explicit drag frames
   });
 
   window.addEventListener('mousemove', (e) => {
     if (isDragging) {
+      dragVelocityX = e.clientX - lastMouseX;
+      lastMouseX = e.clientX;
+      
       x = e.clientX - dragOffsetX;
       y = e.clientY - dragOffsetY;
       vy = 0;
-      updatePosition();
+
+      // Determine drag frame based on velocity
+      let absVel = Math.abs(dragVelocityX);
+      if (dragVelocityX > 0) { // moving right
+        if (absVel > 20) frame = 9; // fast
+        else if (absVel > 5) frame = 7; // med
+        else frame = 5; // slow
+      } else { // moving left
+        if (absVel > 20) frame = 10;
+        else if (absVel > 5) frame = 8;
+        else frame = 6;
+      }
+      
+      updatePosition(1); // Force scaleX(1) since we have distinct frames
+      img.src = `/shimeji-gojo/shime${frame}.png`;
     }
   });
 
@@ -60,11 +87,12 @@ export function initShimeji() {
     if (isDragging) {
       isDragging = false;
       state = STATES.FALLING;
+      frame = 4;
+      img.src = `/shimeji-gojo/shime${frame}.png`;
       shimeji.style.cursor = 'grab';
     }
   });
   
-  // Also add close functionality on double click or right click
   shimeji.addEventListener('contextmenu', (e) => {
     e.preventDefault();
     if(confirm('Dismiss Gojo?')) {
@@ -72,8 +100,24 @@ export function initShimeji() {
     }
   });
 
-  function updatePosition() {
-    shimeji.style.transform = `translate(${x}px, ${y}px) scaleX(${direction})`;
+  function updatePosition(overrideScaleX?: number) {
+    let scaleX = overrideScaleX !== undefined ? overrideScaleX : direction;
+    shimeji.style.transform = `translate(${x}px, ${y}px) scaleX(${scaleX})`;
+  }
+
+  function pickRandomIdle() {
+    const idles = [
+      [11], // duduk
+      [15, 16, 17], // duduk buka mata
+      [18, 19, 20, 21], // tiduran
+      [26, 27, 28, 29], // duduk buka mata 2
+      [30, 31, 32, 33], // siul
+      [43, 44, 45, 46] // teleport
+    ];
+    let r = Math.random();
+    // 10% chance for teleport, otherwise even distribution
+    if (r > 0.9) return [43, 44, 45, 46];
+    return idles[Math.floor(Math.random() * 5)];
   }
 
   function changeState(newState) {
@@ -82,88 +126,138 @@ export function initShimeji() {
     frameTimer = 0;
     
     if (state === STATES.IDLE) {
-      frame = Math.random() > 0.5 ? 1 : 11; // 1 = stand, 11 = sit
+      currentIdleFrames = pickRandomIdle();
+      idleIndex = 0;
+      frame = currentIdleFrames[0];
+      
+      if (currentIdleFrames[0] === 43) {
+        state = STATES.TELEPORTING;
+      }
     } else if (state === STATES.WALKING) {
-      frame = 4; // start walking
+      frame = 1;
       direction = Math.random() > 0.5 ? 1 : -1;
     } else if (state === STATES.FALLING) {
-      frame = 7;
+      frame = 4;
+    } else if (state === STATES.CLIMBING_LEFT) {
+      frame = 12;
+      direction = 1; // specific frames don't need flip
+    } else if (state === STATES.CLIMBING_RIGHT) {
+      frame = 23;
+      direction = 1;
     }
   }
 
   function animate() {
-    if (!document.getElementById('gojo-shimeji')) return; // if removed
+    if (!document.getElementById('gojo-shimeji')) return;
 
-    // Physics & State Logic
     if (state === STATES.FALLING) {
       vy += gravity;
       if (vy > maxVy) vy = maxVy;
       y += vy;
+      frame = 4;
 
       if (y >= window.innerHeight - size) {
         y = window.innerHeight - size;
         vy = 0;
         changeState(STATES.IDLE);
       }
-      
-      // Falling animation frames 7,8,9
-      frameTimer++;
-      if (frameTimer > 10) {
-        frameTimer = 0;
-        frame = frame === 7 ? 8 : (frame === 8 ? 9 : 7);
-      }
     } 
     else if (state === STATES.IDLE) {
       actionTimer++;
-      if (actionTimer > 120 + Math.random() * 120) { // 2-4 seconds
+      if (actionTimer > 200 + Math.random() * 200) { 
         changeState(STATES.WALKING);
       }
       
-      // Idle animation (1,2,3 or 11,12,13)
       frameTimer++;
-      if (frameTimer > 15) {
+      if (frameTimer > 15) { // slower idle animation
         frameTimer = 0;
-        if (frame >= 1 && frame <= 3) {
-          frame = frame === 3 ? 1 : frame + 1;
-        } else if (frame >= 11 && frame <= 13) {
-          frame = frame === 13 ? 11 : frame + 1;
+        idleIndex = (idleIndex + 1) % currentIdleFrames.length;
+        frame = currentIdleFrames[idleIndex];
+      }
+    }
+    else if (state === STATES.TELEPORTING) {
+      frameTimer++;
+      if (frameTimer > 10) {
+        frameTimer = 0;
+        idleIndex++;
+        if (idleIndex < currentIdleFrames.length) {
+          frame = currentIdleFrames[idleIndex];
+          // On the very last frame (46), teleport across screen
+          if (frame === 46) {
+            x = Math.random() * (window.innerWidth - size);
+            // small opacity flash effect
+            shimeji.style.opacity = '0';
+            setTimeout(() => { shimeji.style.opacity = '1'; }, 100);
+          }
+        } else {
+          // done teleporting
+          changeState(STATES.IDLE);
         }
       }
     }
     else if (state === STATES.WALKING) {
       x += walkSpeed * direction;
       
-      // Screen bounds
       if (x <= 0) {
         x = 0;
-        direction = 1;
+        if (Math.random() > 0.5) changeState(STATES.CLIMBING_LEFT);
+        else direction = 1;
       } else if (x >= window.innerWidth - size) {
         x = window.innerWidth - size;
-        direction = -1;
+        if (Math.random() > 0.5) changeState(STATES.CLIMBING_RIGHT);
+        else direction = -1;
       }
 
       actionTimer++;
-      if (actionTimer > 100 + Math.random() * 100) {
+      if (actionTimer > 150 + Math.random() * 150) {
         changeState(STATES.IDLE);
       }
 
-      // Walking animation frames 4,5,6
       frameTimer++;
       if (frameTimer > 8) {
         frameTimer = 0;
-        frame = frame === 6 ? 4 : frame + 1;
+        frame = frame === 3 ? 1 : frame + 1; // frames 1-3
+      }
+    }
+    else if (state === STATES.CLIMBING_LEFT) {
+      y -= walkSpeed; // move up
+      
+      frameTimer++;
+      if (frameTimer > 12) {
+        frameTimer = 0;
+        frame = frame === 13 ? 12 : 13; // 12-13
+      }
+      
+      if (y <= 0) {
+        y = 0;
+        changeState(STATES.FALLING); // drop when hits top
+      }
+    }
+    else if (state === STATES.CLIMBING_RIGHT) {
+      y -= walkSpeed;
+      
+      frameTimer++;
+      if (frameTimer > 12) {
+        frameTimer = 0;
+        frame = frame >= 25 ? 23 : frame + 1; // 23-25
+      }
+      
+      if (y <= 0) {
+        y = 0;
+        changeState(STATES.FALLING);
       }
     }
 
     if (!isDragging) {
-      updatePosition();
+      // Apply direction scale only if walking or falling or idle
+      let overrideScale = (state === STATES.CLIMBING_LEFT || state === STATES.CLIMBING_RIGHT) ? 1 : direction;
+      updatePosition(overrideScale);
       img.src = `/shimeji-gojo/shime${frame}.png`;
     }
 
     requestAnimationFrame(animate);
   }
 
-  // Start the loop
   updatePosition();
   requestAnimationFrame(animate);
 }
