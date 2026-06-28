@@ -19,6 +19,10 @@ export default defineConfig({
     logo: '/satoru-gojo-8.png',
     siteTitle: 'Dirar',
 
+    search: {
+      provider: 'local'
+    },
+
 
     nav: [
       { text: 'Home', link: '/' },
