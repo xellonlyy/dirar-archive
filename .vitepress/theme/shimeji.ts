@@ -101,23 +101,18 @@ export function initShimeji() {
   });
 
   function updatePosition(overrideScaleX?: number) {
-    let scaleX = overrideScaleX !== undefined ? overrideScaleX : direction;
+    let scaleX = overrideScaleX !== undefined ? overrideScaleX : -direction;
     shimeji.style.transform = `translate(${x}px, ${y}px) scaleX(${scaleX})`;
   }
 
   function pickRandomIdle() {
-    const idles = [
-      [11], // duduk
-      [15, 16, 17], // duduk buka mata
-      [18, 19, 20, 21], // tiduran
-      [26, 27, 28, 29], // duduk buka mata 2
-      [30, 31, 32, 33], // siul
-      [43, 44, 45, 46] // teleport
-    ];
     let r = Math.random();
-    // 10% chance for teleport, otherwise even distribution
-    if (r > 0.9) return [43, 44, 45, 46];
-    return idles[Math.floor(Math.random() * 5)];
+    if (r < 0.35) return [11]; // 35% duduk biasa
+    if (r < 0.65) return [18, 19, 20, 21]; // 30% tiduran
+    if (r < 0.85) return [30, 31, 32, 33]; // 20% siul
+    if (r < 0.88) return [15, 16, 17]; // 3% buka mata 1
+    if (r < 0.91) return [26, 27, 28, 29]; // 3% buka mata 2
+    return [43, 44, 45, 46]; // 9% teleport
   }
 
   function changeState(newState) {
@@ -199,13 +194,21 @@ export function initShimeji() {
       x += walkSpeed * direction;
       
       if (x <= 0) {
-        x = 0;
-        if (Math.random() > 0.5) changeState(STATES.CLIMBING_LEFT);
-        else direction = 1;
+        if (Math.random() > 0.5) {
+          x = -32; // offset to touch left wall
+          changeState(STATES.CLIMBING_LEFT);
+        } else {
+          x = 0;
+          direction = 1;
+        }
       } else if (x >= window.innerWidth - size) {
-        x = window.innerWidth - size;
-        if (Math.random() > 0.5) changeState(STATES.CLIMBING_RIGHT);
-        else direction = -1;
+        if (Math.random() > 0.5) {
+          x = window.innerWidth - size + 32; // offset to touch right wall
+          changeState(STATES.CLIMBING_RIGHT);
+        } else {
+          x = window.innerWidth - size;
+          direction = -1;
+        }
       }
 
       actionTimer++;
@@ -230,6 +233,7 @@ export function initShimeji() {
       
       if (y <= 0) {
         y = 0;
+        x = 0; // reset offset
         changeState(STATES.FALLING); // drop when hits top
       }
     }
@@ -244,6 +248,7 @@ export function initShimeji() {
       
       if (y <= 0) {
         y = 0;
+        x = window.innerWidth - size; // reset offset
         changeState(STATES.FALLING);
       }
     }
