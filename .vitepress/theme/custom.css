@@ -558,3 +558,39 @@ body::before {
     display: none !important;
   }
 }
+
+/* =========================================================
+   Gojo Speech Bubble
+   ========================================================= */
+.gojo-bubble {
+  position: absolute;
+  top: -40px;
+  left: 50%;
+  transform: translateX(-50%) scale(0);
+  background: white;
+  color: black;
+  padding: 6px 12px;
+  border-radius: 12px;
+  font-size: 14px;
+  font-weight: bold;
+  white-space: nowrap;
+  pointer-events: none;
+  opacity: 0;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  z-index: 1000;
+}
+.gojo-bubble::after {
+  content: '';
+  position: absolute;
+  bottom: -6px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 6px 6px 0;
+  border-style: solid;
+  border-color: white transparent transparent transparent;
+}
+.gojo-bubble.show {
+  transform: translateX(-50%) scale(1);
+  opacity: 1;
+}

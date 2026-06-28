@@ -46,8 +46,14 @@ export function initShimeji() {
   let lastMouseX = window.innerWidth / 2;
   let dragVelocityX = 0;
 
+  let clickStartX = 0;
+  let clickStartY = 0;
+
   // Interaction
   shimeji.addEventListener('mousedown', (e) => {
+    clickStartX = e.clientX;
+    clickStartY = e.clientY;
+    
     isDragging = true;
     state = STATES.DRAGGED;
     dragOffsetX = e.clientX - x;
@@ -56,6 +62,45 @@ export function initShimeji() {
     shimeji.style.cursor = 'grabbing';
     direction = 1; // reset flip for explicit drag frames
   });
+
+  let bubbleTimeout: any;
+  shimeji.addEventListener('click', (e) => {
+    // Determine if it was a quick click vs a drag
+    const dist = Math.hypot(e.clientX - clickStartX, e.clientY - clickStartY);
+    if (dist < 10) {
+      showBubble();
+    }
+  });
+
+  function showBubble() {
+    let bubble = shimeji.querySelector('.gojo-bubble');
+    if (!bubble) {
+      bubble = document.createElement('div');
+      bubble.className = 'gojo-bubble';
+      shimeji.appendChild(bubble);
+    }
+    
+    const phrases = ["Yowai mo!", "Daijoubu desho, datte kimi yowai mon", "Ryōiki Tenkai!", "Boku wa saikyou dakara"];
+    const phrase = phrases[Math.floor(Math.random() * phrases.length)];
+    bubble.textContent = phrase;
+    bubble.classList.add('show');
+    
+    if (window.speechSynthesis) {
+      const utterance = new SpeechSynthesisUtterance(phrase);
+      // Try to find a Japanese voice
+      const voices = window.speechSynthesis.getVoices();
+      const jpVoice = voices.find(v => v.lang.includes('ja') || v.lang.includes('JP'));
+      if (jpVoice) utterance.voice = jpVoice;
+      utterance.pitch = 1.0;
+      utterance.rate = 1.1;
+      window.speechSynthesis.speak(utterance);
+    }
+
+    clearTimeout(bubbleTimeout);
+    bubbleTimeout = setTimeout(() => {
+      bubble.classList.remove('show');
+    }, 3000);
+  }
 
   window.addEventListener('mousemove', (e) => {
     if (isDragging) {
