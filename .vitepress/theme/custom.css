@@ -146,3 +146,30 @@ body::before {
 #custom-cursor.pointer {
   background-position: right center;
 }
+
+/* Better Footer Styling */
+.VPFooter {
+  background: rgba(20, 20, 25, 0.6) !important;
+  backdrop-filter: blur(15px) !important;
+  border-top: 1px solid rgba(168, 85, 247, 0.3) !important;
+  box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.5) !important;
+  position: relative;
+  z-index: 10;
+}
+
+.VPFooter::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--vp-c-brand-1), var(--vp-c-brand-2), transparent);
+}
+
+.VPFooter .message,
+.VPFooter .copyright {
+  color: rgba(255, 255, 255, 0.8) !important;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
