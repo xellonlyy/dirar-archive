@@ -1,4 +1,9 @@
----\ntitle: FAQ\ndescription: Frequently Asked Questions.\n---\n\n\n
+---
+title: FAQ
+description: Frequently Asked Questions.
+---
+
+
 <div class="faq-hero">
   <h1 class="faq-title">Frequently Asked Questions</h1>
   <p class="faq-subtitle">Find quick answers to common issues regarding installations, plugins, and errors.</p>
@@ -72,61 +77,6 @@
     </ul>
   </div>
 </div>
-\n---
-title: FAQ
-description: Frequently Asked Questions.
----
-
-# ✦ Frequently Asked Questions
-
-- [⭐ General](#general)[1. Unable to access Dirar.li. e.g friend, or different device](#dns)
-- [2. Unable to access Pixeldrain](#pixeldrain)
-- [3. Is [plugin] compatible with my After Effects version?](#pluginversion)
-- [4. How can I resolve "This unlicensed Adobe app will be disabled"?](#gcc)
-- [5. What will happen if I switch After Effects versions?](#swap)
-- [6. What are plugins and which ones should I download?](#plugins)
-- [7. Which version of After Effects should I get?](#version)
-- [8. Can I download cracked plugins despite having a legitimate copy?](#legitimate)
-- [9. There is a watermark when I use a plugin?](#watermarked)
-- [10. My software says it can be updated. Should I click accept?](#update)
-- [11. I have duplicate effects from a plugin. What do I do?](#duplicates)
-- [12. I installed an extension (e.g. Flow) that appears in the list, but nothing happens when I click on it.](#CEP)
-- [13. Generative AI is not working. Help!](#genAI)
-- [14. Missing CEP folder.](#missingcep)
-- [15. Magic Bullet Look presets not appearing same as the original coloring.](#_15-magic-bullet-look-presets-not-appearing-same-as-the-original-coloring)
-[⭐ Windows](#windows)
-- [1. "Windows cannot complete the extraction. The destination file could not be created"](#winextract)
-- [2. "An unexpected error is keeping you from copying the file, Error 0x80004005"](#0x80004005)
-- [3. "The application was unable to start correctly (Oxc0000142). Click OK to close the application."](#0xc0000142)
-- [4. "The system cannot find the path specified."](#pathspecified)
-- [5. Error Code: 24 (Adobe)](#code24)
-- [6. "AfterFX.exe - System Error. The code execution cannot proceed because MSVCP110.dll was not found."](#aesystemerror)
-- [7. DaVinci Resolve Studio not starting (Windows).](#resolvesfailedstartup)
-- [8. "The installation cannot continue as the installer file may be damaged. Download the installer file again."](#windamaged)
-- [9. Error Code 127 (Adobe)](#wincode127)
-- [10. "Patching Error - Pattern in Resolve. exe matched 0 times in .text section. Expected exactly 1."](#resolve-expected1)
-- [11. Windows Defender is blocking an application from running and I don't know how to stop it?](#defenderblock)
-- [12. I’m unable to launch specific games (e.g Valorant) after Adobe installation(s)?](#launchissues)
-- [13. DeleteFile failed; code 5. Access is denied. (Red Giant Service.exe)](#redgiantcode5)
-- [14. "Error copying file from [...] Red Giant Service.exe" (Maxon App)](#errorcopying-maxon)
-[⭐ MacOS](#macos)
-- [1. "After Effects can't continue: unexpected failure during application startup."](#unexpectedfailure)
-- [2. "The following plugins are installed but are not yet compatible with this version".](#compatabilitymac)
-- [3. "Is damaged and cannot be opened, you should eject the disk image / you should move it to the trash."](#eject-trash)
-- [4. "The installation cannot continue as the installer file may be damaged. Download the installer file again."](#macdamaged)
-- [5. "You don't have XCode Command Line tools"](#xcode)
-- [6. "Error: couldn't find main entry point"](#mainentrypoint)
-- [7. Failed with error code 133 (Adobe)](#mac133)
-- [8. "Cannot be opened because it is from an unidentified developer" / "because Apple cannot check it for malicious software" / "cannot verify that this app is free from malware".](#unidentified)
-- [9. "Unable to expand [X] into " ". (Error 79)"](#mac79)
-- [10. "There was a problem installing CCXProcess"](#ccxprocess)
-- [11. "The file “Patch.command” could not be executed because you do not have appropriate access privileges."](#patch.command)
-- [12. Error creating directory / ***unknown variable asesupportfilepath 1***](#errordirectory)
-- [13. Error Code 127 (Adobe)](#maccode127)
-- [14. Error: SyntaxError: JSON Parse error: Unexpected EOF (-2700)](#unexpectedeof)
-- [15. When I type my password in Terminal nothing happens?](#passwordterminal)
-- [16. I can't find my Library folder in Finder.](#library)
-- [17. "Adobe X wants to access key "Adobe Licensing Information“ in your keychain"](#keychain)
 
 ## ⭐ General {#general}
 
@@ -521,4 +471,4 @@ Library is hidden by default on Mac. To enable it, do this:
 
 Either submlit the password used to unlock your Mac and click allow, or deny.
 
-If notification persists often, run the following [dmg file.](https://www.mediafire.com/file_premium/0gu7qklf7jh2bxh/Adobe_Keychain_Fixer_v0_15_Monter_Group.dmg/file)
+If notification persists often, run the following [dmg file.](https://www.mediafire.com/file_premium/0gu7qklf7jh2bxh/Adobe_Keychain_Fixer_v0_15_Monter_Group.dmg/file)\n\n
