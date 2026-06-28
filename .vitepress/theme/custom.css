@@ -251,3 +251,154 @@ body::before {
   border-color: rgba(168, 85, 247, 0.4);
   transform: translateX(6px);
 }
+
+/* =========================================================
+   UI Upgrades (Mouse Spotlight, Orbs, Scrollbar, Accordion)
+   ========================================================= */
+
+/* 1. Neon Scrollbar */
+::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.2);
+}
+::-webkit-scrollbar-thumb {
+  background: #a855f7;
+  border-radius: 4px;
+  box-shadow: 0 0 8px rgba(168, 85, 247, 0.8);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #c084fc;
+}
+
+/* 2. Floating Orbs Background */
+.bg-orbs-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: -1;
+  overflow: hidden;
+}
+.bg-orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.15;
+  animation: float 20s infinite ease-in-out alternate;
+}
+.bg-orb-1 {
+  width: 400px;
+  height: 400px;
+  background: #a855f7;
+  top: 10%;
+  left: 10%;
+}
+.bg-orb-2 {
+  width: 500px;
+  height: 500px;
+  background: #ec4899;
+  bottom: 20%;
+  right: 10%;
+  animation-delay: -5s;
+}
+.bg-orb-3 {
+  width: 300px;
+  height: 300px;
+  background: #6366f1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation-delay: -10s;
+}
+@keyframes float {
+  0% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(30px, -50px) scale(1.1); }
+  100% { transform: translate(-30px, 30px) scale(0.9); }
+}
+
+/* 3. Mouse Spotlight on Glass Cards */
+.glass-card {
+  position: relative;
+  overflow: hidden;
+}
+.glass-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(
+    600px circle at var(--mouse-x) var(--mouse-y), 
+    rgba(168, 85, 247, 0.1),
+    transparent 40%
+  );
+  opacity: 0;
+  transition: opacity 0.3s;
+  pointer-events: none;
+  z-index: 1;
+}
+.glass-card:hover::before {
+  opacity: 1;
+}
+
+/* 4. Beautiful Accordions for FAQ */
+.faq-grid .details.custom-block {
+  background: rgba(30, 30, 30, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  margin: 12px 0;
+  padding: 0;
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+.faq-grid .details.custom-block:hover {
+  border-color: rgba(168, 85, 247, 0.3);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+.faq-grid .details.custom-block summary {
+  padding: 16px;
+  font-weight: 600;
+  font-family: 'Outfit', sans-serif;
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+}
+.faq-grid .details.custom-block summary::-webkit-details-marker {
+  display: none;
+}
+.faq-grid .details.custom-block summary::after {
+  content: '+';
+  font-size: 1.2rem;
+  color: #a855f7;
+  transition: transform 0.3s ease;
+}
+.faq-grid .details.custom-block[open] summary::after {
+  content: '−';
+  transform: rotate(180deg);
+}
+.faq-grid .details.custom-block p, 
+.faq-grid .details.custom-block ul,
+.faq-grid .details.custom-block div {
+  padding: 0 16px 16px;
+  margin: 0;
+  color: #a3a3a3;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+.faq-grid .details.custom-block a {
+  color: #a855f7;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+.faq-grid .details.custom-block a:hover {
+  color: #c084fc;
+}

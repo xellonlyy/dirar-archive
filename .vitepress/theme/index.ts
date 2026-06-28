@@ -24,7 +24,8 @@ export default {
       }, { threshold: 0.1 })
 
       // Select elements to animate, avoiding headings so anchor links work perfectly
-      document.querySelectorAll('.VPFeature, .vp-doc p, .vp-doc img, .vp-doc ul, .vp-doc ol').forEach((el) => {
+      // Added .faq-card and .glass-card for the new beautiful UI!
+      document.querySelectorAll('.VPFeature, .vp-doc p, .vp-doc img, .vp-doc ul, .vp-doc ol, .faq-card, .glass-card').forEach((el) => {
         el.classList.add('scroll-hidden')
         observer.observe(el)
       })
@@ -33,36 +34,65 @@ export default {
     onMounted(() => {
       initObserver()
 
-      if (typeof window !== 'undefined' && !window.matchMedia('(pointer: coarse)').matches) {
-        const cursor = document.createElement('div')
-        cursor.id = 'custom-cursor'
-        document.body.appendChild(cursor)
+      if (typeof window !== 'undefined') {
+        // --- 1. Floating Orbs ---
+        if (!document.getElementById('orbs-bg')) {
+          const orbs = document.createElement('div')
+          orbs.id = 'orbs-bg'
+          orbs.className = 'bg-orbs-container'
+          orbs.innerHTML = `
+            <div class="bg-orb bg-orb-1"></div>
+            <div class="bg-orb bg-orb-2"></div>
+            <div class="bg-orb bg-orb-3"></div>
+          `
+          document.body.appendChild(orbs)
+        }
 
+        // --- 2. Mouse Spotlight ---
         document.addEventListener('mousemove', (e) => {
-          cursor.style.display = 'block'
-          cursor.style.left = e.clientX + 'px'
-          cursor.style.top = e.clientY + 'px'
-        })
-        
-        document.addEventListener('mouseleave', () => {
-          cursor.style.display = 'none'
-        })
-        
-        document.addEventListener('mouseover', (e) => {
-          const target = e.target as HTMLElement
-          if (target && typeof target.closest === 'function') {
-            const isClickable = target.closest('a, button, [role="button"], input, select, textarea, .vp-doc img')
-            if (isClickable) {
-              cursor.classList.add('pointer')
-            } else {
-              cursor.classList.remove('pointer')
-            }
-          }
+          const cards = document.querySelectorAll('.glass-card')
+          cards.forEach((card) => {
+            const htmlCard = card as HTMLElement
+            const rect = htmlCard.getBoundingClientRect()
+            const x = e.clientX - rect.left
+            const y = e.clientY - rect.top
+            htmlCard.style.setProperty('--mouse-x', `${x}px`)
+            htmlCard.style.setProperty('--mouse-y', `${y}px`)
+          })
         })
 
-        const style = document.createElement('style')
-        style.innerHTML = '* { cursor: none !important; }'
-        document.head.appendChild(style)
+        // --- 3. Custom Cursor (Existing) ---
+        if (!window.matchMedia('(pointer: coarse)').matches) {
+          const cursor = document.createElement('div')
+          cursor.id = 'custom-cursor'
+          document.body.appendChild(cursor)
+
+          document.addEventListener('mousemove', (e) => {
+            cursor.style.display = 'block'
+            cursor.style.left = e.clientX + 'px'
+            cursor.style.top = e.clientY + 'px'
+          })
+          
+          document.addEventListener('mouseleave', () => {
+            cursor.style.display = 'none'
+          })
+          
+          document.addEventListener('mouseover', (e) => {
+            const target = e.target as HTMLElement
+            if (target && typeof target.closest === 'function') {
+              const isClickable = target.closest('a, button, [role="button"], input, select, textarea, .vp-doc img, summary')
+              if (isClickable) {
+                cursor.classList.add('pointer')
+              } else {
+                cursor.classList.remove('pointer')
+              }
+            }
+          })
+
+          const style = document.createElement('style')
+          style.innerHTML = '* { cursor: none !important; }'
+          document.head.appendChild(style)
+        }
       }
     })
 
