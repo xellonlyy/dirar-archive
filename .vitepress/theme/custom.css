@@ -475,3 +475,56 @@ body::before {
 }
 
 /* End of fixes */
+
+/* =========================================================
+   Desktop Sidebar Hamburger Toggle
+   ========================================================= */
+
+.sidebar-toggle-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: var(--vp-nav-height);
+  color: var(--vp-c-text-1);
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  transition: color 0.25s;
+  margin-right: 8px; /* space between hamburger and title */
+}
+.sidebar-toggle-btn:hover {
+  color: var(--vp-c-brand-1);
+}
+
+@media (min-width: 960px) {
+  /* Show custom toggle on desktop */
+  .sidebar-toggle-btn {
+    display: flex;
+  }
+  
+  /* When sidebar is closed via our body class */
+  body.desktop-sidebar-closed .VPSidebar {
+    transform: translateX(-100%) !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+    transition: transform 0.25s ease, opacity 0.25s ease;
+  }
+
+  body.desktop-sidebar-closed .VPContent.has-sidebar {
+    padding-left: 0 !important;
+    transition: padding-left 0.25s ease;
+  }
+
+  body.desktop-sidebar-closed .VPFooter.has-sidebar {
+    padding-left: 0 !important;
+    transition: padding-left 0.25s ease;
+  }
+}
+
+@media (max-width: 959px) {
+  /* Hide custom toggle on mobile (VitePress already provides one) */
+  .sidebar-toggle-btn {
+    display: none !important;
+  }
+}

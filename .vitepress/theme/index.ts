@@ -69,6 +69,27 @@ export default {
         };
         setTimeout(setupGojoToggle, 100);
 
+        // --- Custom Desktop Sidebar Toggle ---
+        const setupSidebarToggle = () => {
+          if (document.getElementById('sidebar-toggle-btn')) return;
+          const navTitle = document.querySelector('.VPNavBarTitle');
+          if (navTitle) {
+            const toggleBtn = document.createElement('button');
+            toggleBtn.id = 'sidebar-toggle-btn';
+            toggleBtn.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>';
+            toggleBtn.className = 'sidebar-toggle-btn';
+            
+            toggleBtn.onclick = () => {
+              document.body.classList.toggle('desktop-sidebar-closed');
+            };
+            
+            navTitle.parentElement.insertBefore(toggleBtn, navTitle);
+          } else {
+            setTimeout(setupSidebarToggle, 100);
+          }
+        };
+        setTimeout(setupSidebarToggle, 100);
+
         // --- 1. Floating Orbs ---
         if (!document.getElementById('orbs-bg')) {
           const orbs = document.createElement('div')
