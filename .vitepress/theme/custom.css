@@ -70,6 +70,12 @@ body::before {
 .VPNavBar .content-body {
   background-color: transparent !important;
 }
+
+/* Hide VitePress default navbar bottom border/divider */
+.VPNavBar .divider,
+.VPNavBar .divider-line {
+  display: none !important;
+}
 .VPSidebar {
   background-color: rgba(27, 27, 31, 0.8) !important;
   backdrop-filter: blur(10px);
