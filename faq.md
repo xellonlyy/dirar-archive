@@ -1,4 +1,4 @@
-\n
+---\ntitle: FAQ\ndescription: Frequently Asked Questions.\n---\n\n\n
 <div class="faq-hero">
   <h1 class="faq-title">Frequently Asked Questions</h1>
   <p class="faq-subtitle">Find quick answers to common issues regarding installations, plugins, and errors.</p>
