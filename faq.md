@@ -5,62 +5,62 @@ description: Frequently Asked Questions.
 
 # ✦ Frequently Asked Questions
 
-- [⭐ General](faq#general)[1. Unable to access Dirar.li. e.g friend, or different device](faq#dns)
-- [2. Unable to access Pixeldrain](faq#pixeldrain)
-- [3. Is [plugin] compatible with my After Effects version?](faq#pluginversion)
-- [4. How can I resolve "This unlicensed Adobe app will be disabled"?](faq#gcc)
-- [5. What will happen if I switch After Effects versions?](faq#swap)
-- [6. What are plugins and which ones should I download?](faq#plugins)
-- [7. Which version of After Effects should I get?](faq#version)
-- [8. Can I download cracked plugins despite having a legitimate copy?](faq#legitimate)
-- [9. There is a watermark when I use a plugin?](faq#watermarked)
-- [10. My software says it can be updated. Should I click accept?](faq#update)
-- [11. I have duplicate effects from a plugin. What do I do?](faq#duplicates)
-- [12. I installed an extension (e.g. Flow) that appears in the list, but nothing happens when I click on it.](faq#CEP)
-- [13. Generative AI is not working. Help!](faq#genAI)
-- [14. Missing CEP folder.](faq#missingcep)
-- [15. Magic Bullet Look presets not appearing same as the original coloring.](faq#_15-magic-bullet-look-presets-not-appearing-same-as-the-original-coloring)
-[⭐ Windows](faq#windows)
-- [1. "Windows cannot complete the extraction. The destination file could not be created"](faq#winextract)
-- [2. "An unexpected error is keeping you from copying the file, Error 0x80004005"](faq#0x80004005)
-- [3. "The application was unable to start correctly (Oxc0000142). Click OK to close the application."](faq#0xc0000142)
-- [4. "The system cannot find the path specified."](faq#pathspecified)
-- [5. Error Code: 24 (Adobe)](faq#code24)
-- [6. "AfterFX.exe - System Error. The code execution cannot proceed because MSVCP110.dll was not found."](faq#aesystemerror)
-- [7. DaVinci Resolve Studio not starting (Windows).](faq#resolvesfailedstartup)
-- [8. "The installation cannot continue as the installer file may be damaged. Download the installer file again."](faq#windamaged)
-- [9. Error Code 127 (Adobe)](faq#wincode127)
-- [10. "Patching Error - Pattern in Resolve. exe matched 0 times in .text section. Expected exactly 1."](faq#resolve-expected1)
-- [11. Windows Defender is blocking an application from running and I don't know how to stop it?](faq#defenderblock)
-- [12. I’m unable to launch specific games (e.g Valorant) after Adobe installation(s)?](faq#launchissues)
-- [13. DeleteFile failed; code 5. Access is denied. (Red Giant Service.exe)](faq#redgiantcode5)
-- [14. "Error copying file from [...] Red Giant Service.exe" (Maxon App)](faq#errorcopying-maxon)
-[⭐ MacOS](faq#macos)
-- [1. "After Effects can't continue: unexpected failure during application startup."](faq#unexpectedfailure)
-- [2. "The following plugins are installed but are not yet compatible with this version".](faq#compatabilitymac)
-- [3. "Is damaged and cannot be opened, you should eject the disk image / you should move it to the trash."](faq#eject-trash)
-- [4. "The installation cannot continue as the installer file may be damaged. Download the installer file again."](faq#macdamaged)
-- [5. "You don't have XCode Command Line tools"](faq#xcode)
-- [6. "Error: couldn't find main entry point"](faq#mainentrypoint)
-- [7. Failed with error code 133 (Adobe)](faq#mac133)
-- [8. "Cannot be opened because it is from an unidentified developer" / "because Apple cannot check it for malicious software" / "cannot verify that this app is free from malware".](faq#unidentified)
-- [9. "Unable to expand [X] into " ". (Error 79)"](faq#mac79)
-- [10. "There was a problem installing CCXProcess"](faq#ccxprocess)
-- [11. "The file “Patch.command” could not be executed because you do not have appropriate access privileges."](faq#patch.command)
-- [12. Error creating directory / ***unknown variable asesupportfilepath 1***](faq#errordirectory)
-- [13. Error Code 127 (Adobe)](faq#maccode127)
-- [14. Error: SyntaxError: JSON Parse error: Unexpected EOF (-2700)](faq#unexpectedeof)
-- [15. When I type my password in Terminal nothing happens?](faq#passwordterminal)
-- [16. I can't find my Library folder in Finder.](faq#library)
-- [17. "Adobe X wants to access key "Adobe Licensing Information“ in your keychain"](faq#keychain)
+- [⭐ General](#general)[1. Unable to access Dirar.li. e.g friend, or different device](#dns)
+- [2. Unable to access Pixeldrain](#pixeldrain)
+- [3. Is [plugin] compatible with my After Effects version?](#pluginversion)
+- [4. How can I resolve "This unlicensed Adobe app will be disabled"?](#gcc)
+- [5. What will happen if I switch After Effects versions?](#swap)
+- [6. What are plugins and which ones should I download?](#plugins)
+- [7. Which version of After Effects should I get?](#version)
+- [8. Can I download cracked plugins despite having a legitimate copy?](#legitimate)
+- [9. There is a watermark when I use a plugin?](#watermarked)
+- [10. My software says it can be updated. Should I click accept?](#update)
+- [11. I have duplicate effects from a plugin. What do I do?](#duplicates)
+- [12. I installed an extension (e.g. Flow) that appears in the list, but nothing happens when I click on it.](#CEP)
+- [13. Generative AI is not working. Help!](#genAI)
+- [14. Missing CEP folder.](#missingcep)
+- [15. Magic Bullet Look presets not appearing same as the original coloring.](#_15-magic-bullet-look-presets-not-appearing-same-as-the-original-coloring)
+[⭐ Windows](#windows)
+- [1. "Windows cannot complete the extraction. The destination file could not be created"](#winextract)
+- [2. "An unexpected error is keeping you from copying the file, Error 0x80004005"](#0x80004005)
+- [3. "The application was unable to start correctly (Oxc0000142). Click OK to close the application."](#0xc0000142)
+- [4. "The system cannot find the path specified."](#pathspecified)
+- [5. Error Code: 24 (Adobe)](#code24)
+- [6. "AfterFX.exe - System Error. The code execution cannot proceed because MSVCP110.dll was not found."](#aesystemerror)
+- [7. DaVinci Resolve Studio not starting (Windows).](#resolvesfailedstartup)
+- [8. "The installation cannot continue as the installer file may be damaged. Download the installer file again."](#windamaged)
+- [9. Error Code 127 (Adobe)](#wincode127)
+- [10. "Patching Error - Pattern in Resolve. exe matched 0 times in .text section. Expected exactly 1."](#resolve-expected1)
+- [11. Windows Defender is blocking an application from running and I don't know how to stop it?](#defenderblock)
+- [12. I’m unable to launch specific games (e.g Valorant) after Adobe installation(s)?](#launchissues)
+- [13. DeleteFile failed; code 5. Access is denied. (Red Giant Service.exe)](#redgiantcode5)
+- [14. "Error copying file from [...] Red Giant Service.exe" (Maxon App)](#errorcopying-maxon)
+[⭐ MacOS](#macos)
+- [1. "After Effects can't continue: unexpected failure during application startup."](#unexpectedfailure)
+- [2. "The following plugins are installed but are not yet compatible with this version".](#compatabilitymac)
+- [3. "Is damaged and cannot be opened, you should eject the disk image / you should move it to the trash."](#eject-trash)
+- [4. "The installation cannot continue as the installer file may be damaged. Download the installer file again."](#macdamaged)
+- [5. "You don't have XCode Command Line tools"](#xcode)
+- [6. "Error: couldn't find main entry point"](#mainentrypoint)
+- [7. Failed with error code 133 (Adobe)](#mac133)
+- [8. "Cannot be opened because it is from an unidentified developer" / "because Apple cannot check it for malicious software" / "cannot verify that this app is free from malware".](#unidentified)
+- [9. "Unable to expand [X] into " ". (Error 79)"](#mac79)
+- [10. "There was a problem installing CCXProcess"](#ccxprocess)
+- [11. "The file “Patch.command” could not be executed because you do not have appropriate access privileges."](#patch.command)
+- [12. Error creating directory / ***unknown variable asesupportfilepath 1***](#errordirectory)
+- [13. Error Code 127 (Adobe)](#maccode127)
+- [14. Error: SyntaxError: JSON Parse error: Unexpected EOF (-2700)](#unexpectedeof)
+- [15. When I type my password in Terminal nothing happens?](#passwordterminal)
+- [16. I can't find my Library folder in Finder.](#library)
+- [17. "Adobe X wants to access key "Adobe Licensing Information“ in your keychain"](#keychain)
 
-## ⭐ General
+## ⭐ General {#general}
 
 ::: tip
 The following questions apply to all users. Scroll further down for issues specfic to either Windows or Mac systems.
 :::
 
-### 1. Unable to access Dirar.li. e.g friend, or different device
+### 1. Unable to access Dirar.li. e.g friend, or different device {#dns}
 
 If the site shows as a blank page or says it cannot be reached, set your DNS to 1.1.1.1 following the instructions below.
 
@@ -69,43 +69,43 @@ Windows: [https://developers.cloudflare.com/1.1.1.1/setup/windows/](https://deve
 
 You may also fix the issue with [WARP](https://one.one.one.one/) - quicker, though must be enabled any time you visit the site.
 
-### 2. Unable to access Pixeldrain
+### 2. Unable to access Pixeldrain {#pixeldrain}
 
 Pixeldrain is blocked in Italy amongst certain ISP, simply download using the GoFile mirror.
 
-### 3. Is [plugin] compatible with my After Effects version?
+### 3. Is [plugin] compatible with my After Effects version? {#pluginversion}
 
 The majority of plugins available will work on any standard version of After Effects (2020+). Scripts and extensions will vary; look into their developer notes.
 
-### 4. How can I resolve "This unlicensed Adobe app will be disabled"?
+### 4. How can I resolve "This unlicensed Adobe app will be disabled"? {#gcc}
 
 This alert is fairly common and easily fixable.[**Click here**](gcc) to learn how to remove it.
 
-### 5. What will happen if I switch After Effects versions?
+### 5. What will happen if I switch After Effects versions? {#swap}
 
 [**Click here**](versionswapguide) to learn how you can make a smooth transition when upgrading versions without losing any of your plugins or presets. It's easier than you might think.
 
-### 6. What are plugins and which ones should I download?
+### 6. What are plugins and which ones should I download? {#plugins}
 
 [**Click here**](beginnersguide#what-are-plugins-and-which-ones-should-i-get) for starter recommendations. Ultimately, it entirely depends on your style.
 
-### 7. Which version of After Effects should I get?
+### 7. Which version of After Effects should I get? {#version}
 
 The newest version (features) is always worth getting as long as you have enough RAM and a good CPU, [**click here for more information.**](beginnersguide#which-version-of-after-effects-should-i-get)
 
-### 8. Can I download cracked plugins despite having a legitimate copy?
+### 8. Can I download cracked plugins despite having a legitimate copy? {#legitimate}
 
 Yes. Why are you paying for it though? XD
 
-### 9. There is a watermark when I use a plugin?
+### 9. There is a watermark when I use a plugin? {#watermarked}
 
 A watermark, typically a red X means that whatever plugin you're using is unlicensed. This indicates you did not install it properly. Make sure to properly read the instructions or refer to our support server for assistance.
 
-### 10. My software says it can be updated. Should I click accept?
+### 10. My software says it can be updated. Should I click accept? {#update}
 
 No, these are official pop-ups. The software will no longer be licensed if you do so.
 
-### 11. I have duplicate effects from a plugin. What do I do?
+### 11. I have duplicate effects from a plugin. What do I do? {#duplicates}
 
 This indicates you have two versions of a plugin installed, or in different locations. Choose and delete one of the paths shown in your error. For example, Sapphire:
 
@@ -114,7 +114,7 @@ This indicates you have two versions of a plugin installed, or in different loca
 
 You can either delete one of these folders, though, consider removing both of them and reinstalling if you're attempting to upgrade a plugin to be safe.
 
-### 12. I installed an extension (e.g. Flow) that appears in the list, but nothing happens when I click on it.
+### 12. I installed an extension (e.g. Flow) that appears in the list, but nothing happens when I click on it. {#CEP}
 
 Ensure that the CEP (Common Extensibility Platform) is enabled.
 
@@ -137,12 +137,12 @@ defaults write com.adobe.CSXS.13 PlayerDebugMode 1
 
 1. Hit enter and you're done.
 
-### 13. Generative AI is not working. Help!
+### 13. Generative AI is not working. Help! {#genAI}
 
 AI Tools such as Generative Fill will not work on cracked versions of Photoshop due to the fact Adobe use a credit system for verification specifically for it. 
 
 
-### 14. Missing CEP folder.
+### 14. Missing CEP folder. {#missingcep}
 
 Make sure your installation isn’t faulty, and that scripting and expressions are enabled in After Effects.
 
@@ -159,7 +159,7 @@ Go to the location below and create a **CEP** folder, and inside that CEP folder
 Mac: `/Library/Application Support/Adobe/`
  Windows: `C:\Program Files (x86)\Common Files\Adobe`
 
-### 15. Magic Bullet Look presets not appearing same as the original coloring.
+### 15. Magic Bullet Look presets not appearing same as the original coloring. {#_15-magic-bullet-look-presets-not-appearing-same-as-the-original-coloring}
 
 Many Looks Builder tools were updated in the 2025 release, causing older presets to appear overexposured.
 
@@ -167,51 +167,51 @@ Many Looks Builder tools were updated in the 2025 release, causing older presets
 2. At the top at "In/Out Color Space", press the dropdown menu.
 3. Select "1D sRGB (Video)"
 
-## ⭐ Windows
+## ⭐ Windows {#windows}
 
 ::: tip
 Common questions and troubleshooting for issues on Windows.
 :::
 
-### 1. "Windows cannot complete the extraction. The destination file could not be created"
+### 1. "Windows cannot complete the extraction. The destination file could not be created" {#winextract}
 
 This error occurs if a file hasn't been properly extracted. Please follow the instructions written at the top of our Windows page regarding how to use 7-Zip.
 
-### 2. "An unexpected error is keeping you from copying the file, Error 0x80004005"
+### 2. "An unexpected error is keeping you from copying the file, Error 0x80004005" {#0x80004005}
 
 This error occurs if a file hasn't been properly extracted. Please follow the instructions written at the top of our Windows page regarding how to use 7-Zip.
 
-### 3. "The application was unable to start correctly (Oxc0000142). Click OK to close the application."
+### 3. "The application was unable to start correctly (Oxc0000142). Click OK to close the application." {#0xc0000142}
 
 Starting from version 24.1, **After Effects requires your processor to support Advanced Vector Extensions 2** or else the software will not launch.
 
 If your processor does not support AVX2, **you'll need to downgrade to AE 2023 or lower**.
 
-### 4. "The system cannot find the path specified."
+### 4. "The system cannot find the path specified." {#pathspecified}
 
 Move the folder to your desktop and try again. If that does not work, remove the "/" symbol from the folder name if included.
 
-### 5. Error Code: 24 (Adobe)
+### 5. Error Code: 24 (Adobe) {#code24}
 
 - Extract the **iso** file itself (Right click > 7-Zip > Extract here)
 - Temporarily turn off your internet.
 - Open the extracted folder and run **Set-up.exe** again.
 
-### 6. "AfterFX.exe - System Error. The code execution cannot proceed because MSVCP110.dll was not found."
+### 6. "AfterFX.exe - System Error. The code execution cannot proceed because MSVCP110.dll was not found." {#aesystemerror}
 
 Your computer is missing necessary components. Install Microsoft Visual C++ Redistributable 2012: [https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist](https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist) and restart your computer.
 
-### 7. DaVinci Resolve Studio not starting (Windows).
+### 7. DaVinci Resolve Studio not starting (Windows). {#resolvesfailedstartup}
 
 Rename OFX folder "Plugins" (`C:\Program Files\Common Files\OFX`) to "Plugins.origin".
 
-### 8. "The installation cannot continue as the installer file may be damaged. Download the installer file again."
+### 8. "The installation cannot continue as the installer file may be damaged. Download the installer file again." {#windamaged}
 
 This error occurs if a file hasn't been properly extracted. Please follow the instructions written at the top of our Windows page regarding how to use 7-Zip.
 
 If it is properly extracted, it may mean you have leftovers from a previous installation. Use the official [Adobe Creative Cloud Cleaner Tool](https://swupmf.adobe.com/webfeed/CleanerTool/win/AdobeCreativeCloudCleanerTool.exe) to get rid of previous installations.
 
-### 9. Error Code 127 (Adobe)
+### 9. Error Code 127 (Adobe) {#wincode127}
 
 [Error code 127](https://helpx.adobe.com/creative-cloud/kb/troubleshoot-download-install-logs#error127) indicates that the installer isn't able to extract the zip file in the `adobeTemp` folder. This can happen due to a lack of disk space or if the necessary permissions are unavailable. Sometimes, even antivirus software can block the extraction process in the temp directory.
 
@@ -225,11 +225,11 @@ If the folder doesn't exist, you can also create the folder.
 2. In the **Security** tab, ensure that permissions for **System** and **Administrators** have **Full Control**.
 3. Turn off your antivirus temporarily or whitelist it.
 
-### 10. "Patching Error - Pattern in Resolve. exe matched 0 times in .text section. Expected exactly 1."
+### 10. "Patching Error - Pattern in Resolve. exe matched 0 times in .text section. Expected exactly 1." {#resolve-expected1}
 
 This error occurs when a user mistakenly installs the free version of DaVinci Resolve and then runs our patch, which is intended for the **Studio** version. Ensure that you install the correct version.
 
-### 11. Windows Defender is blocking an application from running and I don't know how to stop it?
+### 11. Windows Defender is blocking an application from running and I don't know how to stop it? {#defenderblock}
 
 You can either exclude or whitelist the file, disabling Defender completely is not recommended.
 
@@ -247,7 +247,7 @@ You can either exclude or whitelist the file, disabling Defender completely is n
 2. When the blocked file shows up under current threats, click it and on Action options, select "Allow on device".
 3. Finalize decision by pressing "start actions".
 
-### 12. I’m unable to launch specific games (e.g Valorant) after Adobe installation(s)?
+### 12. I’m unable to launch specific games (e.g Valorant) after Adobe installation(s)? {#launchissues}
 
 If after installation you start having problems with programs and games that worked fine before, simply delete the following registry key:
 
@@ -262,40 +262,40 @@ then reboot your system.
 Certain games and other sensitive apps that use anti-cheat mechanisms may detect and flag DLL redirection as suspicious activity which may result in false positives.
  Source: [https://wiki.dbzer0.com/genp-guides/guide/#troubleshoot-section](https://wiki.dbzer0.com/genp-guides/guide/#troubleshoot-section)
 
-### 13. DeleteFile failed; code 5. Access is denied. (Red Giant Service.exe)
+### 13. DeleteFile failed; code 5. Access is denied. (Red Giant Service.exe) {#redgiantcode5}
 
 1. Open Task Manager (Ctrl+Shift+Esc)
 2. Search **Red Giant Service** & **MxNotify**
 3. Right click > End tasks
 4. Try again.
 
-### 14. "Error copying file from [...] Red Giant Service.exe" (Maxon App)
+### 14. "Error copying file from [...] Red Giant Service.exe" (Maxon App) {#errorcopying-maxon}
 
 1. Open Task Manager (Ctrl+Shift+Esc)
 2. Search **Red Giant Service** & **MxNotify**
 3. Right click > End tasks
 4. Try again.
 
-## ⭐ MacOS
+## ⭐ MacOS {#macos}
 
 ::: tip
 Common questions and troubleshooting for issues on Mac.
 :::
 
-### 1. "After Effects can't continue: unexpected failure during application startup."
+### 1. "After Effects can't continue: unexpected failure during application startup." {#unexpectedfailure}
 
 After Effects 2021 and below are not compatible with OS14 and higher. You won’t be able to launch these versions of After Effects. Your only option is to install After Effects 2022 or newer.
 
 > If this appears on 2022+:
 > [https://community.adobe.com/t5/after-effects-bugs/after-effects-23-6-and-24-0-not-starting-on-macos-14-sonoma/idi-p/14139194#comments](https://community.adobe.com/t5/after-effects-bugs/after-effects-23-6-and-24-0-not-starting-on-macos-14-sonoma/idi-p/14139194#comments)
 
-### 2. "The following plugins are installed but are not yet compatible with this version".
+### 2. "The following plugins are installed but are not yet compatible with this version". {#compatabilitymac}
 
 This issue occurs when a user installs an outdated plugin only designed for Intel Macs on After Effects that is running natively on Apple Silicon (M1+ on After Effects 2022+).
 
 Only a small number of plugins on our site are not supported, [**click here**](rosetta) for a more in-depth explanation and your choices moving forward.
 
-### 3. "Is damaged and cannot be opened, you should eject the disk image / you should move it to the trash."
+### 3. "Is damaged and cannot be opened, you should eject the disk image / you should move it to the trash." {#eject-trash}
 
 #### If the error occurs when running an application file:
 
@@ -321,17 +321,17 @@ sudo xattr -rd com.apple.quarantine
 
 Still having issues? Try using [Sentinel](https://itsalin.com/appInfo/?id=sentinel) to solve the problem.
 
-### 4. "The installation cannot continue as the installer file may be damaged. Download the installer file again."
+### 4. "The installation cannot continue as the installer file may be damaged. Download the installer file again." {#macdamaged}
 
 Right Click > Show Package Contents > Contents > MacOS > Install.
 
-### 5. "You don't have XCode Command Line tools"
+### 5. "You don't have XCode Command Line tools" {#xcode}
 
 - Monters "23.6 fix.pkg" is unsupported on Sonoma, causing this error. You won't be able to run it.
 
 You can download and run this alternative [**patcher**](https://www.mediafire.com/file/uzy5d89ufktmw9c/ADOBE+23.6+FIX.zip/file) instead. Instructions are included.
 
-### 6. "Error: couldn't find main entry point"
+### 6. "Error: couldn't find main entry point" {#mainentrypoint}
 
 This typically means the plugin you're trying to run is missing a key file it needs to start, or it’s not installed correctly. Refer to text instructions and/or visual guides and reinstall it from scratch.
 
@@ -341,11 +341,11 @@ This typically means the plugin you're trying to run is missing a key file it ne
 
 Use [Sentinel](https://itsalin.com/appInfo/?id=sentinel) to sign the plugin or disable gatekeeper, proceed with caution.
 
-### 7. Failed with error code 133 (Adobe)
+### 7. Failed with error code 133 (Adobe) {#mac133}
 
 Error 133 indicates insufficient disk space to download and install the applications. Free up some space or select another location for your app and try again.
 
-### 8. "Cannot be opened because it is from an unidentified developer" / "because Apple cannot check it for malicious software" / "cannot verify that this app is free from malware".
+### 8. "Cannot be opened because it is from an unidentified developer" / "because Apple cannot check it for malicious software" / "cannot verify that this app is free from malware". {#unidentified}
 
 By default, macOS blocks most apps that aren’t from the App Store and lack signatures, even if they’re completely safe.
 
@@ -367,11 +367,11 @@ By default, macOS blocks most apps that aren’t from the App Store and lack sig
 
 Still having issues? Try using [Sentinel](https://itsalin.com/appInfo/?id=sentinel) to sign or unblock the app.
 
-### 9. "Unable to expand [X] into " ". (Error 79)"
+### 9. "Unable to expand [X] into \" \". (Error 79)" {#mac79}
 
 This error occurs if a file hasn't been properly extracted. Please follow the instructions written at the top of our Mac page regarding how to use Keka.
 
-### 10. "There was a problem installing CCXProcess"
+### 10. "There was a problem installing CCXProcess" {#ccxprocess}
 
 1. Open Terminal
 2. Copy and paste the following:
@@ -382,7 +382,7 @@ sudo softwareupdate --install-rosetta --agree-to-license
 
 1. Press enter. After Rosetta is installed, run the Adobe installer again.
 
-### 11. "The file “Patch.command” could not be executed because you do not have appropriate access privileges."
+### 11. "The file “Patch.command” could not be executed because you do not have appropriate access privileges." {#patch.command}
 
 1. Open Terminal.
 2. Input the following:
@@ -395,7 +395,7 @@ chmod +x
 2. Drop the file into Terminal.
 3. Click on the Terminal window, and then press return.
 
-### 12. Error creating directory / ***unknown variable asesupportfilepath 1***
+### 12. Error creating directory / ***unknown variable asesupportfilepath 1*** {#errordirectory}
 
 This error can appear when attempting to install Maxon plugins.
 
@@ -409,7 +409,7 @@ sudo sh /Volumes/Red\ Giant\ Installer/Red\ Giant\ Installer.app/Contents/MacOS/
 
 1. Enter you password when prompted, and then hit Y if prompted.
 
-### 13. Error Code 127 (Adobe)
+### 13. Error Code 127 (Adobe) {#maccode127}
 
 [Error code 127](https://helpx.adobe.com/creative-cloud/kb/troubleshoot-download-install-logs#error127) indicates that the installer isn't able to extract the zip file in the `adobeTemp` folder. This can happen due to a lack of disk space or if the necessary permissions are unavailable. Sometimes, even antivirus software can block the extraction process in the temp directory.
 
@@ -422,7 +422,7 @@ Open the folder where you want to see the hidden files, and select "Command"+"Sh
 3. Select system from the **Name** column. Ensure that is has **Read & Write** privileges.
 4. Turn off your antivirus temporarily or whitelist it. You can also free up some space and retry.
 
-### 14. Error: SyntaxError: JSON Parse error: Unexpected EOF (-2700)
+### 14. Error: SyntaxError: JSON Parse error: Unexpected EOF (-2700) {#unexpectedeof}
 
 1. Uninstall Creative Cloud with the **[Creative Cloud Cleaner Tool](https://helpx.adobe.com/creative-cloud/kb/cc-cleaner-tool-installation-problems)**.
 2. Navigate to: `/Library/Application Support/Adobe/` and **delete** the folder "**Caps**".
@@ -431,11 +431,11 @@ Open the folder where you want to see the hidden files, and select "Command"+"Sh
 
 1. Reinstall again.
 
-### 15. When I type my password in Terminal nothing happens?
+### 15. When I type my password in Terminal nothing happens? {#passwordterminal}
 
 For security purposes your password is completely hidden in Terminal, type the password to unlock your Mac and hit enter as normal.
 
-### 16. I can't find my Library folder in Finder.
+### 16. I can't find my Library folder in Finder. {#library}
 
 Library is hidden by default on Mac. To enable it, do this:
 
@@ -443,7 +443,7 @@ Library is hidden by default on Mac. To enable it, do this:
 2. In the top left go to **Settings > Sidebar > Enable Hard Disks**.
  Now you'll find "Macintosh" on the left sidebar, and inside, your Library.
 
-### 17. "Adobe X wants to access key "Adobe Licensing Information“ in your keychain"
+### 17. "Adobe X wants to access key \"Adobe Licensing Information“ in your keychain" {#keychain}
 
 Either submlit the password used to unlock your Mac and click allow, or deny.
 
