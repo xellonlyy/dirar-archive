@@ -26,6 +26,22 @@ export default {
 
     onMounted(() => {
       initObserver()
+
+      if (typeof window !== 'undefined' && !window.matchMedia('(pointer: coarse)').matches) {
+        const cursor = document.createElement('div')
+        cursor.id = 'custom-cursor'
+        document.body.appendChild(cursor)
+
+        document.addEventListener('mousemove', (e) => {
+          cursor.style.display = 'block'
+          cursor.style.left = e.clientX + 'px'
+          cursor.style.top = e.clientY + 'px'
+        })
+
+        const style = document.createElement('style')
+        style.innerHTML = '* { cursor: none !important; }'
+        document.head.appendChild(style)
+      }
     })
 
     watch(() => route.path, () => {
