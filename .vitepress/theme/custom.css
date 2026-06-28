@@ -70,17 +70,7 @@ body::before {
 
 /* Custom Scrollbar */
 ::-webkit-scrollbar {
-  width: 10px;
-}
-::-webkit-scrollbar-track {
-  background: rgba(0, 0, 0, 0.5);
-}
-::-webkit-scrollbar-thumb {
-  background: var(--vp-c-brand-1);
-  border-radius: 5px;
-}
-::-webkit-scrollbar-thumb:hover {
-  background: var(--vp-c-brand-2);
+  display: none;
 }
 
 /* Glassmorphism & Neon Hover for Cards */
