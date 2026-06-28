@@ -32,7 +32,7 @@ export default defineConfig({
     sidebar: [
       {
         text: '📂 Downloads',
-        collapsed: false,
+        collapsed: true,
         items: [
           { text: 'Windows', link: '/windows' },
           { text: 'MacOS', link: '/mac' },
@@ -42,7 +42,7 @@ export default defineConfig({
       },
       {
         text: '❔ FAQ',
-        collapsed: false,
+        collapsed: true,
         items: [
           { text: 'Frequently Asked Questions', link: '/faq' },
           { text: 'Visual Installation Tutorials', link: '/tutorials' },
@@ -53,7 +53,7 @@ export default defineConfig({
       },
       {
         text: '🪐 Guides',
-        collapsed: false,
+        collapsed: true,
         items: [
           { text: 'After Effects Beginners Guide', link: '/beginnersguide' },
           { text: 'Changing After Effects Version', link: '/versionswapguide' },
@@ -65,7 +65,7 @@ export default defineConfig({
       },
       {
         text: '🔗 Other Links',
-        collapsed: false,
+        collapsed: true,
         items: [
           { text: 'Helpful Websites', link: '/websites' },
           { text: 'AMV Footage', link: '/footage' },

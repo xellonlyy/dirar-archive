@@ -474,15 +474,4 @@ body::before {
   display: inline-block !important;
 }
 
-/* Fix 2: Prevent hard cut-off during overscroll rubber-banding at the bottom on Mac */
-/* Instead of breaking the background, we just extend the layout container */
-.VPApp {
-  min-height: 100vh;
-}
-
-.VPFooter {
-  position: relative;
-  /* Add a large padding bottom and negative margin to cover overscroll */
-  padding-bottom: calc(env(safe-area-inset-bottom, 24px) + 50vh) !important;
-  margin-bottom: -50vh !important;
-}
+/* End of fixes */
