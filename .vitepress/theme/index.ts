@@ -149,15 +149,36 @@ export default {
           document.head.appendChild(style)
         }
       }
+      
+      // Domain Expansion Transition
+      document.addEventListener('click', (e) => {
+        const target = e.target as HTMLElement;
+        const link = target.closest('a');
+        if (link && link.href && (link.href.endsWith('/windows') || link.href.endsWith('/windows.html'))) {
+          e.preventDefault();
+          
+          const overlay = document.createElement("div");
+          overlay.className = "domain-overlay";
+
+          const handsign = document.createElement("img");
+          handsign.src = "/icons/gojo-handsign.png"; 
+          handsign.className = "domain-handsign";
+          handsign.alt = "Domain Expansion";
+
+          overlay.appendChild(handsign);
+          document.body.appendChild(overlay);
+
+          // Subtle transition duration
+          setTimeout(() => {
+            overlay.remove();
+            router.go(link.href);
+          }, 500); // Only wait 500ms
+        }
+      });
     })
 
     watch(() => route.path, () => {
-      if (typeof document !== 'undefined') {
-        document.body.classList.remove('warp-active');
-        void document.body.offsetWidth; // Force reflow
-        document.body.classList.add('warp-active');
-      }
-      
+      // route change logic (warp removed)
       nextTick(() => {
         initObserver()
       })
