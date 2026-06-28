@@ -157,8 +157,10 @@ export default {
         if (link && link.href) {
           const isWindows = link.href.endsWith('/windows') || link.href.endsWith('/windows.html');
           const isMac = link.href.endsWith('/mac') || link.href.endsWith('/mac.html');
+          const isBeginner = link.href.endsWith('/beginnersguide') || link.href.endsWith('/beginnersguide.html');
+          const isExt = link.href.endsWith('/extensions') || link.href.endsWith('/extensions.html');
           
-          if (isWindows || isMac) {
+          if (isWindows || isMac || isBeginner || isExt) {
             e.preventDefault();
             
             const overlay = document.createElement("div");
@@ -166,7 +168,11 @@ export default {
 
             const handsign = document.createElement("img");
             // Choose image based on target
-            handsign.src = isWindows ? "/icons/gojo-handsign.png" : "/icons/sukuna-handsign.png"; 
+            if (isWindows) handsign.src = "/icons/gojo-handsign.png";
+            else if (isMac) handsign.src = "/icons/sukuna-handsign.png";
+            else if (isBeginner) handsign.src = "/icons/jackpot-handsign.png";
+            else if (isExt) handsign.src = "/icons/mahoraga-handsign.png";
+            
             handsign.className = "domain-handsign";
             handsign.alt = "Domain Expansion";
 

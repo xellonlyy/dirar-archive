@@ -616,7 +616,7 @@ body::before {
 
 /* Gambar Segel Tangan (Handsign) Tipis & Hitam Putih */
 .domain-handsign {
-  width: 350px; 
+  width: 250px; 
   opacity: 0;
   transform: scale(0.9);
   filter: grayscale(100%);
