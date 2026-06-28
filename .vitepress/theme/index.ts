@@ -226,43 +226,9 @@ export default {
         }
       }
       
-      // Domain Expansion Transition
+      // Global Click Listener
       document.addEventListener('click', (e) => {
         const target = e.target as HTMLElement;
-        const link = target.closest('a');
-        if (link && link.href) {
-          const isWindows = link.href.endsWith('/windows') || link.href.endsWith('/windows.html');
-          const isMac = link.href.endsWith('/mac') || link.href.endsWith('/mac.html');
-          const isBeginner = link.href.endsWith('/beginnersguide') || link.href.endsWith('/beginnersguide.html');
-          const isExt = link.href.endsWith('/extensions') || link.href.endsWith('/extensions.html');
-          
-          if (isWindows || isMac || isBeginner || isExt) {
-            e.preventDefault();
-            
-            const overlay = document.createElement("div");
-            overlay.className = "domain-overlay";
-
-            const handsign = document.createElement("img");
-            // Choose image based on target
-            if (isWindows) handsign.src = "/icons/gojo-handsign.png";
-            else if (isMac) handsign.src = "/icons/sukuna-handsign.png";
-            else if (isBeginner) handsign.src = "/icons/jackpot-handsign.png";
-            else if (isExt) handsign.src = "/icons/mahoraga-handsign.png";
-            
-            handsign.className = "domain-handsign";
-            handsign.alt = "Domain Expansion";
-
-          overlay.appendChild(handsign);
-          document.body.appendChild(overlay);
-
-          // Subtle transition duration
-          setTimeout(() => {
-            overlay.remove();
-            router.go(link.href);
-          }, 500); // Only wait 500ms
-          } // end if (isWindows...)
-        } // end if (link && link.href)
-        
         // Mahoraga Button Logic
         const linkElem = target.closest('a') as HTMLAnchorElement;
         const isMahoraga = linkElem && linkElem.href && (linkElem.classList.contains('mahoraga-btn') || linkElem.href.includes('pixeldrain.com'));
