@@ -13,36 +13,36 @@ Instead of downloading files from a central server, torrenting involves download
 
 Guide: [https://rentry.co/anime-torrents](https://rentry.co/anime-torrents)
 
-[nyaa.si](https://nyaa.si)
-[beatrice-raws](https://beatrice-raws.org/)
-[erai-raws](https://www.erai-raws.info/)
-[shanaproject](https://www.shanaproject.com)
+- [nyaa.si](https://nyaa.si)
+- [beatrice-raws](https://beatrice-raws.org/)
+- [erai-raws](https://www.erai-raws.info/)
+- [shanaproject](https://www.shanaproject.com)
 
 ### Direct Download (DDL)
 
 Some users may not want to torrent due to lack of storage, legal concerns, or rather because they’re a mobile editor. For whatever the reason — If you’re looking to download full episodes without torrents, your best bet would be browsing direct download (DD) sources.
 
-[Anime-Raws](https://sites.google.com/view/animeraws-and-allanimesource/home)
-[AnimeOut](https://www.animeout.xyz)
-[KayoAnime](https://kayoanime.com)
-[AnimeTosho](https://animetosho.org)
+- [Anime-Raws](https://sites.google.com/view/animeraws-and-allanimesource/home)
+- [AnimeOut](https://www.animeout.xyz)
+- [KayoAnime](https://kayoanime.com)
+- [AnimeTosho](https://animetosho.org)
 
 ### OP/ED creditless
 
 Have you ever wanted to edit a scene from an anime opening or ending, but without all the words on the screen? To download anime openings or endings without credits you must download them separately, rather than sourcing a full episode.
 
-[animethemes.moe](https://animethemes.moe/anime)
-[MagikarpVids](https://magikarpvidsopedcreditless.wordpress.com)
-[HDKirin's OP/ED](https://docs.google.com/spreadsheets/u/0/d/1zF6x8MKCTgJ86ogdiL5io8IF0kO4NQdgSriG6bin92s/htmlview)
-[Animecflife](https://animecflife.blogspot.com/)
+- [animethemes.moe](https://animethemes.moe/anime)
+- [MagikarpVids](https://magikarpvidsopedcreditless.wordpress.com)
+- [HDKirin's OP/ED](https://docs.google.com/spreadsheets/u/0/d/1zF6x8MKCTgJ86ogdiL5io8IF0kO4NQdgSriG6bin92s/htmlview)
+- [Animecflife](https://animecflife.blogspot.com/)
 
 ### Community Sites
 
 You’ll find plenty of sites within the community, for editors, by editors meant to make things easier for everyone else. The sites below either provide full episodes, or individual scenes.
 
-[animeclips.online](https://animeclips.online/home/)
-[Ringwitdaclips](https://ringwitdaclips.com)
-[SakugaBooru](https://www.sakugabooru.com)
+- [animeclips.online](https://animeclips.online/home/)
+- [Ringwitdaclips](https://ringwitdaclips.com)
+- [SakugaBooru](https://www.sakugabooru.com)
 
 ### Anime Scenepacks
 
