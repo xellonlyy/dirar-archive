@@ -10,6 +10,9 @@ export default defineConfig({
   head: [
     ['link', { rel: 'icon', href: '/logo.ico' }],
     ['meta', { property: 'og:image', content: '/satoru-gojo-8.png' }],
+    ['link', { rel: 'preconnect', href: 'https://fonts.googleapis.com' }],
+    ['link', { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: '' }],
+    ['link', { href: 'https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800&family=Space+Grotesk:wght@500;700&display=swap', rel: 'stylesheet' }]
   ],
 
   themeConfig: {

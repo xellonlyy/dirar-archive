@@ -25,27 +25,27 @@ hero:
       link: /changelog
 
 features:
-  - title: Windows
+  - title: "🖥️ Windows"
     details: Software and plugins.
     link: /windows
     linkText: View Downloads
-  - title: MacOS
+  - title: "🍎 MacOS"
     details: Software and plugins.
     link: /mac
     linkText: View Downloads
-  - title: Extensions & Scripts
+  - title: "🧩 Extensions & Scripts"
     details: Extensions and Scripts for After Effects.
     link: /extensions
     linkText: Browse Extensions
-  - title: Beginners Guide
+  - title: "🔰 Beginners Guide"
     details: Everything you need to know as a new editor for After Effects.
     link: /beginnersguide
     linkText: Read Guide
-  - title: Adobe Ungenuine Popup Fix
+  - title: "🛡️ Adobe Ungenuine Fix"
     details: Remove the infamous "Adobe Genuine Service" pop-up.
     link: /gcc
     linkText: Fix It
-  - title: Helpful Websites
+  - title: "🔗 Helpful Websites"
     details: Other resources for editors; tools, fonts, and downloaders.
     link: /websites
     linkText: View List

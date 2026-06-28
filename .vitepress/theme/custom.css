@@ -1,10 +1,15 @@
 /* Dirar - Custom Theme Overrides */
 
 :root {
+  --vp-font-family-base: 'Space Grotesk', sans-serif;
   --vp-c-brand-1: #a855f7;
   --vp-c-brand-2: #9333ea;
   --vp-c-brand-3: #7c3aed;
   --vp-c-brand-soft: rgba(168, 85, 247, 0.14);
+}
+
+h1, h2, h3, h4, h5, h6, .title, .name {
+  font-family: 'Outfit', sans-serif !important;
 }
 
 /* Make home page hero gradient match purple branding */
@@ -61,4 +66,44 @@ body::before {
 }
 .VPContent {
   background-color: transparent !important;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.5);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--vp-c-brand-1);
+  border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--vp-c-brand-2);
+}
+
+/* Glassmorphism & Neon Hover for Cards */
+.VPFeature {
+  background: rgba(255, 255, 255, 0.05) !important;
+  backdrop-filter: blur(12px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  transition: all 0.3s ease !important;
+}
+.VPFeature:hover {
+  transform: translateY(-5px) scale(1.02);
+  background: rgba(168, 85, 247, 0.15) !important;
+  border-color: rgba(168, 85, 247, 0.6) !important;
+  box-shadow: 0 0 25px rgba(168, 85, 247, 0.4);
+}
+
+/* Floating animation for Gojo Image */
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-15px); }
+  100% { transform: translateY(0px); }
+}
+.VPHero .image-src {
+  animation: float 6s ease-in-out infinite;
+  filter: drop-shadow(0 0 25px rgba(168, 85, 247, 0.4));
 }
