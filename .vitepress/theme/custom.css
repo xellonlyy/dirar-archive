@@ -1,0 +1,31 @@
+/* Dirar - Custom Theme Overrides */
+
+:root {
+  --vp-c-brand-1: #a855f7;
+  --vp-c-brand-2: #9333ea;
+  --vp-c-brand-3: #7c3aed;
+  --vp-c-brand-soft: rgba(168, 85, 247, 0.14);
+}
+
+/* Make home page hero gradient match purple branding */
+.VPHome .name.clip {
+  background: linear-gradient(120deg, #a855f7, #ec4899, #8b5cf6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Slightly tighten up the sidebar item spacing */
+.VPSidebarItem.level-1 .item {
+  padding: 3px 0;
+}
+
+/* Style the custom blocks to match */
+.custom-block.tip {
+  border-color: var(--vp-c-brand-1);
+}
+
+/* Password code blocks */
+code {
+  color: var(--vp-c-brand-1);
+}

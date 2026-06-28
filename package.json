@@ -1,0 +1,16 @@
+{
+  "name": "dirar-site",
+  "version": "1.0.0",
+  "description": "Dirar - Editing Resources Archive",
+  "scripts": {
+    "dev": "vitepress dev",
+    "build": "vitepress build",
+    "preview": "vitepress preview"
+  },
+  "devDependencies": {
+    "vitepress": "^1.6.3"
+  },
+  "allowScripts": {
+    "esbuild@0.21.5": true
+  }
+}
