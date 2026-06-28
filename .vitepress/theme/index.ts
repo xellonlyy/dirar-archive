@@ -154,16 +154,21 @@ export default {
       document.addEventListener('click', (e) => {
         const target = e.target as HTMLElement;
         const link = target.closest('a');
-        if (link && link.href && (link.href.endsWith('/windows') || link.href.endsWith('/windows.html'))) {
-          e.preventDefault();
+        if (link && link.href) {
+          const isWindows = link.href.endsWith('/windows') || link.href.endsWith('/windows.html');
+          const isMac = link.href.endsWith('/mac') || link.href.endsWith('/mac.html');
           
-          const overlay = document.createElement("div");
-          overlay.className = "domain-overlay";
+          if (isWindows || isMac) {
+            e.preventDefault();
+            
+            const overlay = document.createElement("div");
+            overlay.className = "domain-overlay";
 
-          const handsign = document.createElement("img");
-          handsign.src = "/icons/gojo-handsign.png"; 
-          handsign.className = "domain-handsign";
-          handsign.alt = "Domain Expansion";
+            const handsign = document.createElement("img");
+            // Choose image based on target
+            handsign.src = isWindows ? "/icons/gojo-handsign.png" : "/icons/sukuna-handsign.png"; 
+            handsign.className = "domain-handsign";
+            handsign.alt = "Domain Expansion";
 
           overlay.appendChild(handsign);
           document.body.appendChild(overlay);
@@ -173,6 +178,7 @@ export default {
             overlay.remove();
             router.go(link.href);
           }, 500); // Only wait 500ms
+          }
         }
       });
     })
