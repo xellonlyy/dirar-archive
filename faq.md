@@ -1,4 +1,78 @@
----
+\n
+<div class="faq-hero">
+  <h1 class="faq-title">Frequently Asked Questions</h1>
+  <p class="faq-subtitle">Find quick answers to common issues regarding installations, plugins, and errors.</p>
+</div>
+
+<div class="faq-grid">
+  <!-- General Card -->
+  <div class="faq-card">
+    <h3>⭐ General</h3>
+    <ul>
+      <li><a href="#dns">1. Unable to access Dirar.li (DNS issue)</a></li>
+      <li><a href="#pixeldrain">2. Unable to access Pixeldrain</a></li>
+      <li><a href="#pluginversion">3. Is [plugin] compatible with my AE version?</a></li>
+      <li><a href="#gcc">4. "This unlicensed Adobe app will be disabled"</a></li>
+      <li><a href="#swap">5. What happens if I switch AE versions?</a></li>
+      <li><a href="#plugins">6. What plugins should I download?</a></li>
+      <li><a href="#version">7. Which version of AE should I get?</a></li>
+      <li><a href="#legitimate">8. Can I use cracked plugins on a legit copy?</a></li>
+      <li><a href="#watermarked">9. Why is there a watermark on my plugin?</a></li>
+      <li><a href="#update">10. Should I accept software updates?</a></li>
+      <li><a href="#duplicates">11. I have duplicate effects from a plugin</a></li>
+      <li><a href="#CEP">12. Extension appears but nothing happens</a></li>
+      <li><a href="#genAI">13. Generative AI is not working</a></li>
+      <li><a href="#missingcep">14. Missing CEP folder</a></li>
+      <li><a href="#magic-bullet">15. Magic Bullet Look presets appear different</a></li>
+    </ul>
+  </div>
+
+  <!-- Windows Card -->
+  <div class="faq-card">
+    <h3>🪟 Windows</h3>
+    <ul>
+      <li><a href="#winextract">1. "Windows cannot complete the extraction"</a></li>
+      <li><a href="#0x80004005">2. "Error 0x80004005"</a></li>
+      <li><a href="#0xc0000142">3. "Application unable to start correctly (0xc0000142)"</a></li>
+      <li><a href="#pathspecified">4. "System cannot find the path specified"</a></li>
+      <li><a href="#code24">5. Error Code: 24 (Adobe)</a></li>
+      <li><a href="#aesystemerror">6. "MSVCP110.dll was not found"</a></li>
+      <li><a href="#resolvesfailedstartup">7. DaVinci Resolve Studio not starting</a></li>
+      <li><a href="#windamaged">8. "Installer file may be damaged"</a></li>
+      <li><a href="#wincode127">9. Error Code 127 (Adobe)</a></li>
+      <li><a href="#resolve-expected1">10. "Patching Error - Expected exactly 1"</a></li>
+      <li><a href="#defenderblock">11. Windows Defender is blocking an app</a></li>
+      <li><a href="#launchissues">12. Unable to launch games after installation</a></li>
+      <li><a href="#redgiantcode5">13. DeleteFile failed; code 5 (Red Giant)</a></li>
+      <li><a href="#errorcopying-maxon">14. "Error copying file from Red Giant"</a></li>
+    </ul>
+  </div>
+
+  <!-- MacOS Card -->
+  <div class="faq-card">
+    <h3>🍎 MacOS</h3>
+    <ul>
+      <li><a href="#unexpectedfailure">1. "Unexpected failure during startup"</a></li>
+      <li><a href="#compatabilitymac">2. "Plugins not yet compatible with this version"</a></li>
+      <li><a href="#eject-trash">3. "Is damaged and cannot be opened"</a></li>
+      <li><a href="#macdamaged">4. "Installer file may be damaged"</a></li>
+      <li><a href="#xcode">5. "You don't have XCode Command Line tools"</a></li>
+      <li><a href="#mainentrypoint">6. "Couldn't find main entry point"</a></li>
+      <li><a href="#mac133">7. Failed with error code 133</a></li>
+      <li><a href="#unidentified">8. "Cannot be opened because unidentified developer"</a></li>
+      <li><a href="#mac79">9. "Unable to expand into (Error 79)"</a></li>
+      <li><a href="#ccxprocess">10. "Problem installing CCXProcess"</a></li>
+      <li><a href="#patch.command">11. "Patch.command could not be executed"</a></li>
+      <li><a href="#errordirectory">12. Error creating directory (asesupportfilepath 1)</a></li>
+      <li><a href="#maccode127">13. Error Code 127 (Adobe)</a></li>
+      <li><a href="#unexpectedeof">14. JSON Parse error: Unexpected EOF (-2700)</a></li>
+      <li><a href="#passwordterminal">15. Typing password in Terminal does nothing?</a></li>
+      <li><a href="#library">16. Can't find Library folder in Finder</a></li>
+      <li><a href="#keychain">17. "Adobe X wants to access keychain"</a></li>
+    </ul>
+  </div>
+</div>
+\n---
 title: FAQ
 description: Frequently Asked Questions.
 ---
@@ -159,7 +233,7 @@ Go to the location below and create a **CEP** folder, and inside that CEP folder
 Mac: `/Library/Application Support/Adobe/`
  Windows: `C:\Program Files (x86)\Common Files\Adobe`
 
-### 15. Magic Bullet Look presets not appearing same as the original coloring. {#_15-magic-bullet-look-presets-not-appearing-same-as-the-original-coloring}
+### 15. Magic Bullet Look presets not appearing same as the original coloring. {#magic-bullet}
 
 Many Looks Builder tools were updated in the 2025 release, causing older presets to appear overexposured.
 
