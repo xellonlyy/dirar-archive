@@ -80,21 +80,18 @@ export function initShimeji() {
       shimeji.appendChild(bubble);
     }
     
-    const phrases = ["Yowai mo!", "Daijoubu desho, datte kimi yowai mon", "Ryōiki Tenkai!", "Boku wa saikyou dakara"];
+    const phrases = [
+      { text: "Yowai mo!", audio: "/shimeji-gojo/yowai_mo.mp3" },
+      { text: "Daijoubu desho, datte kimi yowai mon", audio: "/shimeji-gojo/daijoubu.m4a" },
+      { text: "Ryōiki Tenkai!", audio: "/shimeji-gojo/ryoiki_tenkai.m4a" },
+      { text: "Boku wa saikyou dakara", audio: "/shimeji-gojo/saikyou.m4a" }
+    ];
     const phrase = phrases[Math.floor(Math.random() * phrases.length)];
-    bubble.textContent = phrase;
+    bubble.textContent = phrase.text;
     bubble.classList.add('show');
     
-    if (window.speechSynthesis) {
-      const utterance = new SpeechSynthesisUtterance(phrase);
-      // Try to find a Japanese voice
-      const voices = window.speechSynthesis.getVoices();
-      const jpVoice = voices.find(v => v.lang.includes('ja') || v.lang.includes('JP'));
-      if (jpVoice) utterance.voice = jpVoice;
-      utterance.pitch = 1.0;
-      utterance.rate = 1.1;
-      window.speechSynthesis.speak(utterance);
-    }
+    const audio = new Audio(phrase.audio);
+    audio.play().catch(e => console.error(e));
 
     clearTimeout(bubbleTimeout);
     bubbleTimeout = setTimeout(() => {
@@ -147,7 +144,8 @@ export function initShimeji() {
 
   function updatePosition(overrideScaleX?: number) {
     let scaleX = overrideScaleX !== undefined ? overrideScaleX : -direction;
-    shimeji.style.transform = `translate(${x}px, ${y}px) scaleX(${scaleX})`;
+    shimeji.style.transform = `translate(${x}px, ${y}px)`;
+    img.style.transform = `scaleX(${scaleX})`;
   }
 
   function pickRandomIdle() {
