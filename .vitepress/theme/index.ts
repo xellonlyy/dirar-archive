@@ -3,6 +3,7 @@ import { useRoute } from 'vitepress'
 import DefaultTheme from 'vitepress/theme'
 import './custom.css'
 import FloatingLogos from './components/FloatingLogos.vue'
+import { initShimeji } from './shimeji'
 
 export default {
   ...DefaultTheme,
@@ -35,6 +36,9 @@ export default {
       initObserver()
 
       if (typeof window !== 'undefined') {
+        // --- Shimeji Gojo ---
+        initShimeji()
+
         // --- 1. Floating Orbs ---
         if (!document.getElementById('orbs-bg')) {
           const orbs = document.createElement('div')
