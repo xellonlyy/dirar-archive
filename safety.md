@@ -11,7 +11,9 @@ We do not modify the files in any way aside from revising instructions in text f
 
 #### Our Background
 
-Dirar was founded in early 2024 by 2 close friends with over a decade of editing experience and a long history of supporting the editing community. Dirar is one of several projects they have developed over the years, previous contributions ranging from creation or involvement in similar websites and publishing tutorials. Beyond our founders, Dirar has grown into what it is currently thanks to the support received from our staff members who joined the team, each contributing to our development. We do not earn profit from this site. Our team believes piracy is meant to be free.
+Dirar was founded with a clear purpose, deeply inspired by satvrn, which is unfortunately closing its doors on July 3rd. Recognizing the immense value of their resources, we took the initiative to archive and preserve all of its assets. Our main goal is to ensure that everyone can continue to access these files freely, without ever having to purchase them elsewhere.
+
+We do not earn a single cent of profit from this site. This project is driven purely by the belief that preserving these assets will be incredibly useful for the community and that they should remain openly available to everyone.
 
 #### Sources
 
