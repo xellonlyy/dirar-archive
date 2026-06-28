@@ -152,6 +152,12 @@ export default {
     })
 
     watch(() => route.path, () => {
+      if (typeof document !== 'undefined') {
+        document.body.classList.remove('warp-active');
+        void document.body.offsetWidth; // Force reflow
+        document.body.classList.add('warp-active');
+      }
+      
       nextTick(() => {
         initObserver()
       })
