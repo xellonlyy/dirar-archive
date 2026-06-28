@@ -1,10 +1,16 @@
-import { onMounted, watch, nextTick } from 'vue'
+import { h, onMounted, watch, nextTick } from 'vue'
 import { useRoute } from 'vitepress'
 import DefaultTheme from 'vitepress/theme'
 import './custom.css'
+import FloatingLogos from './components/FloatingLogos.vue'
 
 export default {
   ...DefaultTheme,
+  Layout() {
+    return h(DefaultTheme.Layout, null, {
+      'home-hero-image': () => h(FloatingLogos)
+    })
+  },
   setup() {
     const route = useRoute()
 
