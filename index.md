@@ -50,3 +50,7 @@ features:
     link: /websites
     linkText: View List
 ---
+
+::: info 🔑 Info Penting
+Semua file ekstrak di website ini menggunakan password: **`star`**
+:::

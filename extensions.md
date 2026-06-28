@@ -11,7 +11,9 @@ description: Extensions and Scripts for After Effects.
 You MUST properly extract or the following files WILL NOT OPEN and will appear BROKEN! Ensure that you have read and understood the following instructions before you begin downloading - [**How to Extract Guide.**](extract)
 :::
 
-#### Password: star
+::: info ?? Password Ekstrak
+Semua file yang di-download menggunakan password: **star**
+:::
 
 > Use a [VPN](https://fmhy.net/privacy#vpn) to bypass Pixeldrain's transfer limit. "/2" and "/3" will also direct you to alternative mirrors.
 
