@@ -710,3 +710,34 @@ body.is-ancient-scroll .VPContent {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
 }
+
+/* =========================================
+   FULLSCREEN MAHORAGA WHEEL OVERLAY
+   ========================================= */
+
+.mahoraga-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.9);
+  z-index: 999999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  animation: domainHandsignSubtle 1.5s ease-out forwards;
+}
+
+.mahoraga-wheel-fullscreen {
+  width: 300px;
+  height: 300px;
+  filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.9)) drop-shadow(0 0 30px rgba(192, 192, 192, 0.7));
+  animation: mahoragaAdaptFullscreen 1.5s steps(8, end) forwards;
+}
+
+@keyframes mahoragaAdaptFullscreen {
+  0% { transform: scale(0.8) rotate(0deg); }
+  100% { transform: scale(1.2) rotate(360deg); }
+}

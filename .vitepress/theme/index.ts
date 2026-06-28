@@ -267,34 +267,23 @@ export default {
         const linkElem = target.closest('a') as HTMLAnchorElement;
         const isMahoraga = linkElem && linkElem.href && (linkElem.classList.contains('mahoraga-btn') || linkElem.href.includes('pixeldrain.com'));
         
-        if (isMahoraga && !linkElem.classList.contains('is-adapting')) {
+        if (isMahoraga) {
           e.preventDefault();
           
-          // Save original content
-          const originalHTML = linkElem.innerHTML;
-          const originalWidth = linkElem.offsetWidth;
-          const originalHeight = linkElem.offsetHeight;
+          const overlay = document.createElement("div");
+          overlay.className = "mahoraga-overlay";
           
-          // Lock size
-          linkElem.style.display = 'inline-flex';
-          linkElem.style.alignItems = 'center';
-          linkElem.style.justifyContent = 'center';
-          linkElem.style.width = `${originalWidth}px`;
-          linkElem.style.height = `${originalHeight}px`;
-          linkElem.classList.add('is-adapting');
+          const wheel = document.createElement("img");
+          wheel.src = "/icons/mahoraga-wheel.png";
+          wheel.className = "mahoraga-wheel-fullscreen";
+          wheel.alt = "Adapting...";
           
-          // Replace with wheel
-          linkElem.innerHTML = `<img src="/icons/mahoraga-wheel.png" class="mahoraga-wheel-img" alt="Adapting..." />`;
+          overlay.appendChild(wheel);
+          document.body.appendChild(overlay);
           
           setTimeout(() => {
+            overlay.remove();
             window.open(linkElem.href, '_blank');
-            
-            // Restore
-            linkElem.innerHTML = originalHTML;
-            linkElem.style.width = '';
-            linkElem.style.height = '';
-            linkElem.style.display = '';
-            linkElem.classList.remove('is-adapting');
           }, 1500);
         }
       });
