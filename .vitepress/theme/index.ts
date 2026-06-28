@@ -260,7 +260,36 @@ export default {
             overlay.remove();
             router.go(link.href);
           }, 500); // Only wait 500ms
-          }
+          } // end if (isWindows...)
+        } // end if (link && link.href)
+        
+        // Mahoraga Button Logic
+        const btn = target.closest('.mahoraga-btn') as HTMLAnchorElement;
+        if (btn && btn.href && !btn.classList.contains('is-adapting')) {
+          e.preventDefault();
+          
+          // Save original content
+          const originalHTML = btn.innerHTML;
+          const originalWidth = btn.offsetWidth;
+          const originalHeight = btn.offsetHeight;
+          
+          // Lock size
+          btn.style.width = `${originalWidth}px`;
+          btn.style.height = `${originalHeight}px`;
+          btn.classList.add('is-adapting');
+          
+          // Replace with wheel
+          btn.innerHTML = `<img src="/icons/mahoraga-wheel.png" class="mahoraga-wheel-img" alt="Adapting..." />`;
+          
+          setTimeout(() => {
+            window.open(btn.href, '_blank');
+            
+            // Restore
+            btn.innerHTML = originalHTML;
+            btn.style.width = '';
+            btn.style.height = '';
+            btn.classList.remove('is-adapting');
+          }, 1500);
         }
       });
     })
