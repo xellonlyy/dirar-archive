@@ -63,9 +63,11 @@ body::before {
 }
 
 /* Fix navbar background split/cut-off on inner pages with sidebar */
+.VPNavBar,
 .VPNavBar.has-sidebar .content,
 .VPNavBar.has-sidebar .title,
-.VPNavBar.has-sidebar .wrapper {
+.VPNavBar.has-sidebar .wrapper,
+.VPNavBar .content-body {
   background-color: transparent !important;
 }
 .VPSidebar {
