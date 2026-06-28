@@ -107,12 +107,12 @@ export function initShimeji() {
 
   function pickRandomIdle() {
     let r = Math.random();
-    if (r < 0.35) return [11]; // 35% duduk biasa
-    if (r < 0.65) return [18, 19, 20, 21]; // 30% tiduran
-    if (r < 0.85) return [30, 31, 32, 33]; // 20% siul
-    if (r < 0.88) return [15, 16, 17]; // 3% buka mata 1
-    if (r < 0.91) return [26, 27, 28, 29]; // 3% buka mata 2
-    return [43, 44, 45, 46]; // 9% teleport
+    if (r < 0.25) return [11]; // 25% duduk biasa
+    if (r < 0.50) return [18, 19, 20, 21]; // 25% tiduran
+    if (r < 0.65) return [30, 31, 32, 33]; // 15% siul
+    if (r < 0.70) return [15, 16, 17]; // 5% buka mata 1
+    if (r < 0.75) return [26, 27, 28, 29]; // 5% buka mata 2
+    return [43, 44, 45, 46]; // 25% teleport
   }
 
   function changeState(newState) {
@@ -195,7 +195,7 @@ export function initShimeji() {
       
       if (x <= 0) {
         if (Math.random() > 0.5) {
-          x = -32; // offset to touch left wall
+          x = -55; // larger offset to touch left wall
           changeState(STATES.CLIMBING_LEFT);
         } else {
           x = 0;
@@ -203,7 +203,7 @@ export function initShimeji() {
         }
       } else if (x >= window.innerWidth - size) {
         if (Math.random() > 0.5) {
-          x = window.innerWidth - size + 32; // offset to touch right wall
+          x = window.innerWidth - size + 55; // larger offset to touch right wall
           changeState(STATES.CLIMBING_RIGHT);
         } else {
           x = window.innerWidth - size;
