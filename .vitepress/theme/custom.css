@@ -507,6 +507,11 @@ body::before {
   color: var(--vp-c-brand-1);
 }
 
+/* Hide the hamburger button on pages without a sidebar (like the landing page) */
+.VPNavBar:not(.has-sidebar) .sidebar-toggle-btn {
+  display: none !important;
+}
+
 @media (min-width: 960px) {
   /* Show custom toggle on desktop */
   .sidebar-toggle-btn {
