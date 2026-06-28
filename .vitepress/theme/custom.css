@@ -639,3 +639,44 @@ body::before {
   }
 }
 
+
+/* =========================================
+   ANCIENT SCROLL (BEGINNERS GUIDE)
+   ========================================= */
+
+body.is-ancient-scroll {
+  background-color: #1a1612 !important;
+  background-image: radial-gradient(circle at center, #241d17 0%, #120f0c 100%) !important;
+  transition: background 1s ease;
+}
+
+body.is-ancient-scroll .vp-doc h1,
+body.is-ancient-scroll .vp-doc h2,
+body.is-ancient-scroll .vp-doc h3 {
+  font-family: "Georgia", "Times New Roman", serif;
+  color: #d4af37; /* Ancient Gold */
+  text-shadow: 0 0 12px rgba(212, 175, 55, 0.4);
+}
+
+body.is-ancient-scroll .vp-doc p,
+body.is-ancient-scroll .vp-doc li {
+  font-family: "Georgia", "Times New Roman", serif;
+  color: #e3d5b8; /* Old parchment ink */
+  font-size: 1.05rem;
+  line-height: 1.8;
+}
+
+body.is-ancient-scroll .vp-doc a {
+  color: #f0c960;
+  text-decoration: underline;
+  text-decoration-color: rgba(240, 201, 96, 0.5);
+}
+
+body.is-ancient-scroll .VPDoc {
+  background: transparent !important;
+}
+
+body.is-ancient-scroll .VPContent {
+  position: relative;
+  z-index: 10;
+}

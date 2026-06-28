@@ -5,6 +5,80 @@ import './custom.css'
 import FloatingLogos from './components/FloatingLogos.vue'
 import { initShimeji } from './shimeji'
 
+let dustAnimFrame: number;
+function initDustParticles() {
+  if (typeof document === 'undefined') return;
+  if (document.getElementById('dust-canvas')) return;
+  
+  const canvas = document.createElement('canvas');
+  canvas.id = 'dust-canvas';
+  canvas.style.position = 'fixed';
+  canvas.style.top = '0';
+  canvas.style.left = '0';
+  canvas.style.width = '100vw';
+  canvas.style.height = '100vh';
+  canvas.style.pointerEvents = 'none';
+  canvas.style.zIndex = '0';
+  canvas.style.opacity = '0.6';
+  canvas.style.transition = 'opacity 1s ease';
+  document.body.appendChild(canvas);
+
+  const ctx = canvas.getContext('2d');
+  if (!ctx) return;
+  
+  let width = canvas.width = window.innerWidth;
+  let height = canvas.height = window.innerHeight;
+  let particles: any[] = [];
+
+  const resize = () => {
+    width = canvas.width = window.innerWidth;
+    height = canvas.height = window.innerHeight;
+  };
+  window.addEventListener('resize', resize);
+
+  for (let i = 0; i < 70; i++) {
+    particles.push({
+      x: Math.random() * width,
+      y: Math.random() * height,
+      r: Math.random() * 1.5 + 0.5,
+      dx: (Math.random() - 0.5) * 0.4,
+      dy: (Math.random() - 0.5) * 0.4 - 0.2, // slight upward drift
+      opacity: Math.random() * 0.5 + 0.2
+    });
+  }
+
+  function draw() {
+    ctx!.clearRect(0, 0, width, height);
+    particles.forEach(p => {
+      p.x += p.dx;
+      p.y += p.dy;
+      if (p.x < 0) p.x = width;
+      if (p.x > width) p.x = 0;
+      if (p.y < 0) p.y = height;
+      if (p.y > height) p.y = 0;
+
+      ctx!.beginPath();
+      ctx!.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+      ctx!.fillStyle = `rgba(220, 200, 150, ${p.opacity})`;
+      ctx!.fill();
+    });
+    dustAnimFrame = requestAnimationFrame(draw);
+  }
+  draw();
+}
+
+function destroyDustParticles() {
+  if (typeof document === 'undefined') return;
+  const canvas = document.getElementById('dust-canvas');
+  if (canvas) {
+    canvas.style.opacity = '0';
+    setTimeout(() => {
+      canvas.remove();
+      cancelAnimationFrame(dustAnimFrame);
+    }, 1000);
+  }
+}
+
 export default {
   ...DefaultTheme,
   Layout() {
@@ -16,6 +90,8 @@ export default {
     const route = useRoute()
 
     const initObserver = () => {
+      if (typeof window === 'undefined' || typeof IntersectionObserver === 'undefined') return;
+      
       const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
           if (entry.isIntersecting) {
@@ -190,10 +266,20 @@ export default {
     })
 
     watch(() => route.path, () => {
-      // route change logic (warp removed)
+      if (typeof document !== 'undefined') {
+        const isBeginner = route.path.includes('/beginnersguide');
+        if (isBeginner) {
+          document.body.classList.add('is-ancient-scroll');
+          initDustParticles();
+        } else {
+          document.body.classList.remove('is-ancient-scroll');
+          destroyDustParticles();
+        }
+      }
+      
       nextTick(() => {
         initObserver()
       })
-    })
+    }, { immediate: true })
   }
 }
