@@ -32,10 +32,19 @@ code {
 
 /* Make home page have the GIF background */
 body {
-  background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.7)), url('/giphy (2).gif') !important;
-  background-size: cover !important;
-  background-attachment: fixed !important;
-  background-position: center !important;
+  position: relative;
+  background-color: #000;
+}
+body::before {
+  content: "";
+  position: fixed;
+  top: -20px; left: -20px; right: -20px; bottom: -20px; /* stretch slightly to hide blur edges */
+  background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.85)), url('/giphy (2).gif');
+  background-size: cover;
+  background-position: center;
+  filter: blur(4px);
+  z-index: -1;
+  pointer-events: none;
 }
 
 /* Make VitePress containers transparent so background shows through */
