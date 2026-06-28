@@ -448,3 +448,36 @@ body::before {
 .gojo-toggle-btn:hover {
   color: var(--vp-c-brand-1);
 }
+
+/* =========================================================
+   Mac & Safari Specific Fixes
+   ========================================================= */
+
+/* Fix 1: Prevent text clipping and subpixel rendering artifacts in Navbar (Home/FAQ) */
+.VPNavBarMenuLink, .gojo-toggle-btn, .title, .name {
+  -webkit-font-smoothing: antialiased !important;
+  -moz-osx-font-smoothing: grayscale !important;
+  overflow: visible !important;
+  padding-top: 2px;
+}
+
+/* Fix 2: Prevent hard cut-off during overscroll rubber-banding at the bottom on Mac */
+html {
+  background-color: #000 !important;
+}
+
+.VPFooter {
+  position: relative;
+}
+
+.VPFooter::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  height: 50vh; /* Extends far below the footer */
+  background: rgba(20, 20, 25, 0.6);
+  backdrop-filter: blur(15px);
+  z-index: -1;
+}
