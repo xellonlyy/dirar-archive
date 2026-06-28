@@ -46,6 +46,10 @@ onUnmounted(() => {
     <div class="icon icon-davinci">
       <img src="/icons/DaVinci_Resolve_Studio.png" alt="DaVinci Resolve" />
     </div>
+    
+    <div class="icon icon-capcut">
+      <img src="/icons/logo%20capcut.png" alt="CapCut" />
+    </div>
   </div>
 </template>
 
@@ -101,6 +105,11 @@ onUnmounted(() => {
   50% { transform: translateZ(60px) translateY(20px) rotate(15deg); }
 }
 
+@keyframes float5 {
+  0%, 100% { transform: translateZ(90px) translateY(0px) rotate(5deg); }
+  50% { transform: translateZ(90px) translateY(-20px) rotate(-10deg); }
+}
+
 .icon {
   position: absolute;
   width: 64px;
@@ -150,6 +159,13 @@ onUnmounted(() => {
   animation-delay: 0.5s;
 }
 
+.icon-capcut {
+  top: 40%;
+  left: -8%;
+  animation: float5 5.5s ease-in-out infinite;
+  animation-delay: 1.5s;
+}
+
 @media (max-width: 768px) {
   .icon {
     width: 48px;
@@ -159,6 +175,7 @@ onUnmounted(() => {
   .icon-pr { top: 5%; right: 0%; }
   .icon-ps { bottom: 0%; left: 5%; }
   .icon-davinci { bottom: 5%; right: 5%; }
+  .icon-capcut { top: 40%; left: 0%; }
   .floating-logos-wrapper {
     transform: none !important;
   }
