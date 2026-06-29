@@ -1,5 +1,6 @@
 import { h, onMounted, watch, nextTick } from 'vue'
-import { useRoute, withBase } from 'vitepress'
+import { useRoute } from 'vitepress'
+import mahoragaWheelImg from '../../public/icons/mahoraga-wheel.png'
 import DefaultTheme from 'vitepress/theme'
 import './custom.css'
 import FloatingLogos from './components/FloatingLogos.vue'
@@ -240,7 +241,7 @@ export default {
           overlay.className = "mahoraga-overlay";
           
           const wheel = document.createElement("img");
-          wheel.src = withBase("/icons/mahoraga-wheel.png");
+          wheel.src = mahoragaWheelImg;
           wheel.className = "mahoraga-wheel-fullscreen";
           wheel.alt = "Adapting...";
           

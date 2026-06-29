@@ -25,30 +25,42 @@ hero:
       link: /changelog
 
 features:
-  - title: "🖥️ Windows"
+  - title: Windows
     details: Software and plugins.
     link: /windows
     linkText: View Downloads
-  - title: "🍎 MacOS"
+    icon:
+      src: /icons/windows-174-svgrepo-com.svg
+  - title: MacOS
     details: Software and plugins.
     link: /mac
     linkText: View Downloads
-  - title: "🧩 Extensions & Scripts"
+    icon:
+      src: /icons/apple-173-svgrepo-com.svg
+  - title: Extensions & Scripts
     details: Extensions and Scripts for After Effects.
     link: /extensions
     linkText: Browse Extensions
-  - title: "🔰 Beginners Guide"
+    icon:
+      src: /icons/puzzle-piece-6-svgrepo-com.svg
+  - title: Beginners Guide
     details: Everything you need to know as a new editor for After Effects.
     link: /beginnersguide
     linkText: Read Guide
-  - title: "🛡️ Adobe Ungenuine Fix"
+    icon:
+      src: /icons/beginner-mark-svgrepo-com.svg
+  - title: Adobe Ungenuine Fix
     details: Remove the infamous "Adobe Genuine Service" pop-up.
     link: /gcc
     linkText: Fix It
-  - title: "🔗 Helpful Websites"
+    icon:
+      src: /icons/shield-svgrepo-com.svg
+  - title: Helpful Websites
     details: Other resources for editors; tools, fonts, and downloaders.
     link: /websites
     linkText: View List
+    icon:
+      src: /icons/link-svgrepo-com.svg
 ---
 
 ::: info 🔑 Info Penting
