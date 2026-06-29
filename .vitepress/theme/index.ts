@@ -5,6 +5,7 @@ import DefaultTheme from 'vitepress/theme'
 import './custom.css'
 import FloatingLogos from './components/FloatingLogos.vue'
 import { initShimeji } from './shimeji'
+import { inject } from '@vercel/analytics'
 
 let dustAnimFrame: number;
 function initDustParticles() {
@@ -89,6 +90,11 @@ export default {
   },
   setup() {
     const route = useRoute()
+
+    // Initialize Vercel Analytics
+    if (typeof window !== 'undefined') {
+      inject()
+    }
 
     const initObserver = () => {
       if (typeof window === 'undefined' || typeof IntersectionObserver === 'undefined') return;
